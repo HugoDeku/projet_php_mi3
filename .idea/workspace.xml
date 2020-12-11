@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="039b7062-15ff-48f7-b7bf-63c2c2e1fb4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/view/data/livre/artemisfowl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/livre/cmbyn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/livre/divergente.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/livre/hg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/livre/lepetitprince.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/magazine/flow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/magazine/hiddenscotland.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/magazine/paper.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/magazine/society.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/magazine/vogue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/afterhours.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/caravelle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/currents.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/energy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/joshua.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/missanthropocene.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/parachute.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/s16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/sosadsosexy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/musique/venus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/video/deadpool2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/data/video/harrypotter.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cd.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/cd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/dvd.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/dvd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/livre.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/livre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/magazine.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/magazine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/perso.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/perso.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +32,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1lVjWOePjvCmTPuA6sMKRSG0eyq" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -39,7 +60,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/view/data/magazine" />
+      <recent name="$PROJECT_DIR$/view/data/video" />
+      <recent name="$PROJECT_DIR$/view/data/livre" />
+      <recent name="$PROJECT_DIR$/view/data/musique" />
+      <recent name="$PROJECT_DIR$/view/data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="039b7062-15ff-48f7-b7bf-63c2c2e1fb4b" name="Default Changelist" comment="" />
@@ -59,10 +95,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="381" y="241" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607693337737">
+      <screen x="0" y="25" width="1440" height="818" />
+    </state>
+    <state x="381" y="241" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.818/-1179.-2135.3840.2135@0.25.1440.818" timestamp="1607693337737" />
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2" timestamp="1607691025201">
+      <screen x="0" y="25" width="1440" height="818" />
+    </state>
+    <state x="320" y="171" key="Vcs.Push.Dialog.v2/0.25.1440.818/-1179.-2135.3840.2135@0.25.1440.818" timestamp="1607691025201" />
+    <state x="506" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607693231714">
+      <screen x="0" y="25" width="1440" height="818" />
+    </state>
+    <state x="506" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.818/-1179.-2135.3840.2135@0.25.1440.818" timestamp="1607693231714" />
   </component>
 </project>
