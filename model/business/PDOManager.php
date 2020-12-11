@@ -9,7 +9,7 @@ use \PDO;
 use \PDOStatement;
 use \PDOException;
 
-abstract class PDOManager
+class PDOManager
 {
     /*private string $host, $db, $encoding, $user, $pass;
     private int $pdoErrorMode;*/
@@ -125,7 +125,7 @@ abstract class PDOManager
         $this->pdoErrorMode = $pdoErrorMode;
     }
 
-    protected function dbConnect() : PDO
+    public function dbConnect() : PDO
     {
         $conn = new PDO("mysql:host=$this->host;dbname=$this->db;charset=$this->encoding", $this->user, $this->pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, $this->pdoErrorMode);
@@ -151,8 +151,10 @@ abstract class PDOManager
         }
     }
 
+    /*
     public abstract function findById(int $id) : ?Entity;
     public abstract function find() : PDOStatement;
     public abstract function findAll(int $pdoFecthMode) : array;
     public abstract function insert(Entity $e) : PDOStatement;
+    */
 }
