@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="039b7062-15ff-48f7-b7bf-63c2c2e1fb4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cd.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/cd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/dvd.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/dvd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/livre.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/livre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/magazine.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/magazine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/perso.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/perso.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +26,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,7 +43,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607689184080</updated>
-      <workItem from="1607689185705" duration="3023000" />
+      <workItem from="1607689185705" duration="8872000" />
     </task>
     <servers />
   </component>
