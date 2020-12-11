@@ -15,8 +15,15 @@
 <body>
 
 <header id="nav">
+    <?php
+    include 'header.php';
+    ?>
 </header>
 
-<footer id="footer"></footer>
+<footer id="footer">
+    <?php
+    include 'footer.php';
+    ?>
+</footer>
 </body>
 </html>
