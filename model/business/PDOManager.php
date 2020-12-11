@@ -9,7 +9,7 @@ use \PDO;
 use \PDOStatement;
 use \PDOException;
 
-class PDOManager
+abstract class PDOManager
 {
     /*private string $host, $db, $encoding, $user, $pass;
     private int $pdoErrorMode;*/
@@ -125,7 +125,7 @@ class PDOManager
         $this->pdoErrorMode = $pdoErrorMode;
     }
 
-    public function dbConnect() : PDO
+    protected function dbConnect() : PDO
     {
         $conn = new PDO("mysql:host=$this->host;dbname=$this->db;charset=$this->encoding", $this->user, $this->pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, $this->pdoErrorMode);

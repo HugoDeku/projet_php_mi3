@@ -4,7 +4,4 @@ require_once("./model/business/PDOManager.php");
 
 use mvc\model\manager\PDOManager;
 
-$bd = new PDOManager();
-
-$bd->dbConnect();
 
