@@ -1,0 +1,81 @@
+body {
+  font-family: sans-serif;
+  background-color: #00000f;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  margin-top: 2%;
+  padding-left: 10%;
+}
+header h1 {
+  font-family: "Arial black";
+  color: #d6dbdf;
+  letter-spacing: 30pt;
+  border-image: linear-gradient(to right, #b71c1c, #e65100, #ffca28) 9;
+  border-image-width: 1px;
+  text-shadow: 5px 0px 0px #7a7a7a, 10px 0px 0px #3d3d3d;
+  width: 200px;
+}
+header nav {
+  margin-top: 20px;
+  display: flex;
+}
+header nav .active {
+  border-bottom: solid 3px #d6dbdf;
+}
+header nav div {
+  min-width: 50px;
+  max-width: 200px;
+  margin: auto;
+  padding: 0px 10px 0px 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header nav div a {
+  font-variant: all-small-caps;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+header nav div:hover ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header nav div:hover ul li {
+  padding: 10px;
+}
+header nav ul {
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  list-style: none;
+  padding: 10px;
+  display: none;
+  background-color: #00000f;
+}
+
+#footer {
+  margin-top: 50px;
+  height: 200px;
+  background-color: #00000f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#footer #pageTop {
+  color: #d6dbdf;
+  text-decoration: none;
+  font-weight: bold;
+}
+#footer #pageTop:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
