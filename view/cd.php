@@ -18,10 +18,10 @@
 
     <!--todo: boucler là dessus-->
     <div class="product_card">
-        <img class="product_image_cd"/>
-        <h2 class="product_name"></h2>
-        <p class="product_artist"></p>
-        <p class="product_date"></p>
+        <img class="product_image_cd" src="data/musique/joshua.jpg"/>
+        <h2 class="product_name">Joshua</h2>
+        <p class="product_artist">French 79</p>
+        <p class="product_date">2019</p>
     </div>
 
 </div>
