@@ -151,8 +151,10 @@ abstract class PDOManager
         }
     }
 
+    /*
     public abstract function findById(int $id) : ?Entity;
     public abstract function find() : PDOStatement;
     public abstract function findAll(int $pdoFecthMode) : array;
     public abstract function insert(Entity $e) : PDOStatement;
+    */
 }
