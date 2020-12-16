@@ -13,6 +13,7 @@ header h1 {
   font-family: "Arial black";
   color: #d6dbdf;
   letter-spacing: 30pt;
+  border: solid 2px #00000f;
   border-image: linear-gradient(to right, #b71c1c, #e65100, #ffca28) 9;
   border-image-width: 1px;
   text-shadow: 5px 0px 0px #7a7a7a, 10px 0px 0px #3d3d3d;

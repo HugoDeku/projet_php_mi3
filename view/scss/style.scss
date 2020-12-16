@@ -26,6 +26,7 @@ header {
     font-family: "Arial black";
     color: $font_color;
     letter-spacing: 30pt;
+    border: solid 2px $bg_color;
     border-image: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow) 9;
     border-image-width: 1px;
     text-shadow: 5px 0px 0px $bg_lighter,
