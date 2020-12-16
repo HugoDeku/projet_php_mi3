@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29d56c1-cbe3-459a-9ca5-4397c6cb2ff7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Emprunt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Entity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Film.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Livre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Magazine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Musique.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Produit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/ProduitStock.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/entities/Utilisateur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/Date.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/Enum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/PasswordHash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/business/PDOManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/business/PDOManager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ljynOj1uxIGa94aTJGrPRYtwAl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +48,11 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DevPHP\projet_php_mi3\utils" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,11 +62,22 @@
       <option name="presentableId" value="Default" />
       <updated>1608124978922</updated>
       <workItem from="1608124994491" duration="53000" />
-      <workItem from="1608125054673" duration="1450000" />
+      <workItem from="1608125054673" duration="7735000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc\model\manager;
+namespace mvc\model\business;
 
 require_once(__DIR__.'/../../conf/config.php');
 
@@ -11,8 +11,6 @@ use \PDOException;
 
 abstract class PDOManager
 {
-    /*private string $host, $db, $encoding, $user, $pass;
-    private int $pdoErrorMode;*/
     private $host, $db, $encoding, $user, $pass;
     private $pdoErrorMode;
 
@@ -141,7 +139,6 @@ abstract class PDOManager
             return $stmt;
         }
         catch (PDOException $ex) {
-            //echo "Error ".$ex->getCode()." : ".$ex->getMessage()."<br/>".$ex->getTraceAsString();
             throw $ex;
         }
         finally {
@@ -151,10 +148,10 @@ abstract class PDOManager
         }
     }
 
-    /*
+
     public abstract function findById(int $id) : ?Entity;
     public abstract function find() : PDOStatement;
     public abstract function findAll(int $pdoFecthMode) : array;
     public abstract function insert(Entity $e) : PDOStatement;
-    */
+
 }
