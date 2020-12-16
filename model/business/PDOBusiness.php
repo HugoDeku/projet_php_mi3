@@ -9,13 +9,13 @@ use \PDO;
 use \PDOStatement;
 use \PDOException;
 
-abstract class PDOManager
+abstract class PDOBusiness
 {
     private $host, $db, $encoding, $user, $pass;
     private $pdoErrorMode;
 
     /**
-     * Manager constructor
+     * PDObusiness constructor
      */
     public function __construct()
     {

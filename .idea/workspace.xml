@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29d56c1-cbe3-459a-9ca5-4397c6cb2ff7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/entities/Emprunt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Entity.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Film.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Livre.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Magazine.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Musique.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Produit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/ProduitStock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/entities/Utilisateur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/Date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/Enum.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/PasswordHash.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/business/UtilisateurBusiness.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/business/PDOManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/business/PDOManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/business/PDOManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/business/PDOBusiness.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +33,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -62,7 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608124978922</updated>
       <workItem from="1608124994491" duration="53000" />
-      <workItem from="1608125054673" duration="7735000" />
+      <workItem from="1608125054673" duration="8031000" />
+      <workItem from="1608137464997" duration="1820000" />
     </task>
     <servers />
   </component>
@@ -79,5 +69,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
