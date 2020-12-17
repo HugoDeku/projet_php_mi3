@@ -20,7 +20,7 @@ class Musique extends ProduitStock
      * @param int $nbPiste
      * @param string $style
      */
-    public function __construct(string $titre, int $stock,string $image, string $artiste, int $anneeSortie, int $nbPiste, string $style)
+    public function __construct(string $titre, int $stock, string $image, string $artiste, int $anneeSortie, int $nbPiste, string $style)
     {
         parent::__construct($titre, $stock, $anneeSortie);
         $this->setImage("view/data/musique/" . $image);

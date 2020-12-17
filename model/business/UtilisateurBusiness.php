@@ -4,9 +4,9 @@
 namespace mvc\model\business;
 require_once ("PDOBusiness.php");
 require_once (__DIR__.'/../entities/Utilisateur.php');
+require_once (__DIR__.'/../entities/Entity.php');
 
 
-use mvc\model\entities\Account;
 use mvc\model\entities\Entity;
 use mvc\model\entities\Utilisateur;
 use PDOStatement;
@@ -52,6 +52,15 @@ class UtilisateurBusiness extends PDOBusiness
             "isadmin" => $e->isAdmin());
         $res=$this->executePrepare($req,$params);
         return $res;
+    }
+
+    public function getUserByPseudo(string $pseudo) : ?Entity{
+        $stmt = $this->executePrepare("select * from utilisateur where pseudo=:pseudo", [ "pseudo" => $pseudo]);
+        $utilisateur = $stmt->fetch();
+        if (!$utilisateur) return null;
+        $utilisateurRes = new Utilisateur($utilisateur["PSEUDO"], $utilisateur["EMAIL"], $utilisateur["MOTDEPASSE"], $utilisateur["ISADMIN"]);
+        $utilisateurRes->setId($utilisateur['ID']);
+        return $utilisateurRes;
     }
 
 
