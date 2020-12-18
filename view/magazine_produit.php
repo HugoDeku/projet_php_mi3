@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OMI • Joshua</title>
-    <link rel="stylesheet" href="scss/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="https://kit.fontawesome.com/5b938fc7f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -26,7 +25,9 @@
                 <i class="fas fa-check-circle"></i>
                 <div>En stock</div>
             </div>
+            <button class="product_add">Ajouter au panier</button>
         </div>
+
     </div>
     <div class="product_description">
         <h2>Plus d'informations</h2>

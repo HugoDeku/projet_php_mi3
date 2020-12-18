@@ -8,6 +8,10 @@ $brown: #3e2b1a;
 $omi_red: #b71c1c;
 $omi_orange: #e65100;
 $omi_yellow: #ffca28;
+$omi_gradient: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow);
+$omi_border_image: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow) 9;
+$available: rgb(0, 95, 30);
+$unavailable: rgb(95, 0, 9);
 
 //background: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow);
 
@@ -22,12 +26,40 @@ header {
   height: min-content;
   margin-top: 2%;
 
+  .basket {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+
+    a {
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      color: $bg_color;
+    }
+
+  }
+
+  .basket:hover {
+    background-color: $bg_lighter;
+  }
+
   h1 {
     font-family: "Arial black";
     color: $font_color;
     letter-spacing: 30pt;
     border: solid 2px $bg_color;
-    border-image: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow) 9;
+    border-image: $omi_border_image;
     border-image-width: 1px;
     text-shadow: 5px 0px 0px $bg_lighter,
                 10px 0px 0px $bg_light;
@@ -36,8 +68,9 @@ header {
   }
 
   nav {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
+    border-bottom: 1px solid white;
 
     .active {
       border-bottom: solid 3px $font_color;
@@ -46,20 +79,34 @@ header {
     div {
       min-width: 50px;
       max-width: 200px;
-
+      padding: 0px 5% 0px 5%;
+      height: 100%;
       margin: auto;
 
-      padding: 0px 10px 0px 10px;
-      height: 100%;
-
       display: flex;
+      justify-content: center;
       align-items: center;
 
       a {
+        padding: 10px;
         font-variant: all-small-caps;
         text-decoration: none;
         font-weight: bold;
         color: white;
+        display: flex;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      div {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -151,7 +198,7 @@ header {
     img {
       opacity: 0.9;
     }
-    border-image: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow) 9;
+    border-image: $omi_border_image;
   }
 
   .category_card {
@@ -165,7 +212,7 @@ header {
     overflow: hidden;
 
     h1 {
-      border-image: linear-gradient(to right, $omi_red, $omi_orange, $omi_yellow) 9;
+      border-image: $omi_border_image;
       border-bottom: solid 2px $bg_color;
       margin-top: 40px;
       padding-left: 40px;
@@ -265,15 +312,16 @@ header {
   }
 
   .stock {
-    color: white;
+    width: 100%;
+    max-width: 300px;
+    color: $available;
     font-size: 0.4em;
-    width: min-content;
     min-width: 130px;
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #79af78;
+    border-bottom: solid 1px $available;
 
     * {
       margin: 0;
@@ -287,10 +335,131 @@ header {
       align-items: center;
       min-height: 30px;
       padding-left: 10px;
-      border-left: solid 1px white;
+      border-left: solid 1px $available;
     }
   }
+  button {
+    margin: 15px;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+    height: 40px;
+    border-radius: 15px;
+    background-color: $available;
+  }
 
+}
+
+#connexion_card {
+  background-color: transparent;
+  border: 3px solid white;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 30px;
+  width: 200px;
+
+  #connexion_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    input {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-top: 20px;
+      height: 25px;
+      background: $omi_gradient;
+      border-radius: 15px;
+      border: 3px solid white;
+      color: white;
+    }
+  }
+}
+
+#already_registered {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: auto;
+    color: $bg_lighter;
+    text-decoration: none;
+  }
+  a:hover{
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+#config_container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .table_container {
+    min-width: 1360px;
+    width: 40%;
+    margin: 20px;
+  }
+
+  .config_table {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+      color: white;
+      font-weight: normal;
+      font-variant: all-small-caps;
+      background-color: $brown;
+    }
+    td {
+      border: 1px solid $brown;
+      padding: 5px;
+      text-align: center;
+      text-wrap: normal;
+
+      img {
+        width: 100px;
+        margin: auto;
+      }
+    }
+    .table_title {
+      font-weight: bold;
+      font-variant: normal;
+      padding: 10px;
+      font-size: 2em;
+    }
+    .table_add {
+      border: 5px solid #cda522;
+    }
+  }
+}
+
+.cart {
+  margin: 10%;
+  margin-top: 20px;
+  border: 1px solid white;
+
+  .cart_item {
+    transform: scale(0.8);
+  }
+}
+
+.cart_title {
+  text-align: center;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 40px;
+  color: white;
 }
 
 

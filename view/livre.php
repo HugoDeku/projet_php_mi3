@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>OMI • Livres</title>
     <link rel="stylesheet" href="scss/style.css">
+    <script src="https://kit.fontawesome.com/5b938fc7f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
 

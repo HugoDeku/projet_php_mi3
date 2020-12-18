@@ -9,6 +9,29 @@ header {
   height: min-content;
   margin-top: 2%;
 }
+header .basket {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+}
+header .basket a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #00000f;
+}
+header .basket:hover {
+  background-color: #7a7a7a;
+}
 header h1 {
   font-family: "Arial black";
   color: #d6dbdf;
@@ -21,8 +44,9 @@ header h1 {
   margin-left: 10%;
 }
 header nav {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
+  border-bottom: 1px solid white;
 }
 header nav .active {
   border-bottom: solid 3px #d6dbdf;
@@ -30,17 +54,30 @@ header nav .active {
 header nav div {
   min-width: 50px;
   max-width: 200px;
-  margin: auto;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 5% 0px 5%;
   height: 100%;
+  margin: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 header nav div a {
+  padding: 10px;
   font-variant: all-small-caps;
   text-decoration: none;
   font-weight: bold;
   color: white;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav div div {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header nav div:hover ul {
   display: flex;
@@ -217,15 +254,16 @@ header nav ul {
   border-bottom: 2px solid white;
 }
 #product_closeup .stock {
-  color: white;
+  width: 100%;
+  max-width: 300px;
+  color: #005f1e;
   font-size: 0.4em;
-  width: min-content;
   min-width: 130px;
   padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #79af78;
+  border-bottom: solid 1px #005f1e;
 }
 #product_closeup .stock * {
   margin: 0;
@@ -238,7 +276,121 @@ header nav ul {
   align-items: center;
   min-height: 30px;
   padding-left: 10px;
-  border-left: solid 1px white;
+  border-left: solid 1px #005f1e;
+}
+#product_closeup button {
+  margin: 15px;
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #005f1e;
+}
+
+#connexion_card {
+  background-color: transparent;
+  border: 3px solid white;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 30px;
+  width: 200px;
+}
+#connexion_card #connexion_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#connexion_card #connexion_content input {
+  margin-bottom: 10px;
+}
+#connexion_card #connexion_content button {
+  margin-top: 20px;
+  height: 25px;
+  background: linear-gradient(to right, #b71c1c, #e65100, #ffca28);
+  border-radius: 15px;
+  border: 3px solid white;
+  color: white;
+}
+
+#already_registered {
+  display: flex;
+  justify-content: center;
+}
+#already_registered a {
+  margin: auto;
+  color: #7a7a7a;
+  text-decoration: none;
+}
+#already_registered a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#config_container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#config_container .table_container {
+  min-width: 1360px;
+  width: 40%;
+  margin: 20px;
+}
+#config_container .config_table {
+  background-color: white;
+  border-collapse: collapse;
+  width: 100%;
+}
+#config_container .config_table th {
+  color: white;
+  font-weight: normal;
+  font-variant: all-small-caps;
+  background-color: #3e2b1a;
+}
+#config_container .config_table td {
+  border: 1px solid #3e2b1a;
+  padding: 5px;
+  text-align: center;
+  text-wrap: normal;
+}
+#config_container .config_table td img {
+  width: 100px;
+  margin: auto;
+}
+#config_container .config_table .table_title {
+  font-weight: bold;
+  font-variant: normal;
+  padding: 10px;
+  font-size: 2em;
+}
+#config_container .config_table .table_add {
+  border: 5px solid #cda522;
+}
+
+.cart {
+  margin: 10%;
+  margin-top: 20px;
+  border: 1px solid white;
+}
+.cart .cart_item {
+  transform: scale(0.8);
+}
+
+.cart_title {
+  text-align: center;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 40px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
