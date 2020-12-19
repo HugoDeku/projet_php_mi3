@@ -32,6 +32,18 @@ if (isset($_GET['controller'])) {
             $controller = new MagazineController();
             $controller->affichage();
             break;
+        case 'musique':
+            $controller = new MusiqueController();
+            $controller->affichage();
+            break;
+        case 'film':
+            $controller = new FilmController();
+            $controller->affichage();
+            break;
+        case 'livre':
+            $controller = new LivreController();
+            $controller->affichage();
+            break;
     }
 } else {
     $controller = new AccueilController();
