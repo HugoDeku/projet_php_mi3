@@ -57,4 +57,13 @@ class LivreBusiness extends PDOBusiness
         return $res;
     }
 
+    public function update(Entity $e): PDOStatement
+    {
+        $req = "update LIVRE SET titre=:titre, image=:image, auteur=:auteur, anneesortie=:anneesortie, stock=:stock, type=:type, pages=:pages WHERE id=:id";
+        $params = array("titre" => $e->getTitre(), "image" => $e->getImage(), "auteur" => $e->getAuteur(),
+            "anneesortie" => $e->getYear(), "stock" => $e->getStock(), "type" => $e->getType(), "pages"=>$e->getPages(), "id"=>$e->getId());
+        $res=$this->executePrepare($req,$params);
+        return $res;
+    }
+
 }

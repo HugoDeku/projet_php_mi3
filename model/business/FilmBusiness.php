@@ -56,4 +56,13 @@ class FilmBusiness extends PDOBusiness
         return $res;
     }
 
+    public function update(Entity $e): PDOStatement
+    {
+        $req = "update FILM SET titre=:titre, image=:image, realisateur=:realisateur, anneesortie=:anneesortie, stock=:stock, vedette=:vedette WHERE id=:id";
+        $params = array("titre" => $e->getTitre(), "image" => $e->getImage(), "realisateur" => $e->getRealisateur(),
+            "anneesortie" => $e->getYear(), "stock" => $e->getStock(), "vedette" => $e->getActeur(), "id"=>$e->getId());
+        $res=$this->executePrepare($req,$params);
+        return $res;
+    }
+
 }
