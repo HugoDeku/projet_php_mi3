@@ -1,10 +1,10 @@
 <?php
 
-require_once ("../model/entities/Produit.php");
-require_once ("../model/entities/Musique.php");
-require_once ("../model/entities/Film.php");
-require_once ("../model/entities/Livre.php");
-require_once ("../model/entities/Magazine.php");
+require_once (__DIR__."/../model/entities/Produit.php");
+require_once (__DIR__."/../model/entities/Musique.php");
+require_once (__DIR__."/../model/entities/Film.php");
+require_once (__DIR__."/../model/entities/Livre.php");
+require_once (__DIR__."/../model/entities/Magazine.php");
 
 use \mvc\model\entities\Produit;
 use \mvc\model\entities\Musique;

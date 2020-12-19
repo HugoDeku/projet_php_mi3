@@ -24,7 +24,7 @@ class Livre extends ProduitStock
     public function __construct(string $titre, string $image, int $stock, int $year, string $auteur, string $type, int $pages)
     {
         parent::__construct($titre, $stock, $year);
-        $this->setImage("view/data/livre/" . $image);
+        $this->setImage("./view/data/livre/" . $image);
         $this->auteur = $auteur;
         $this->type = $type;
         $this->pages = $pages;
