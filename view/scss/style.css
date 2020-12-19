@@ -9,6 +9,9 @@ header {
   height: min-content;
   margin-top: 2%;
 }
+header .account {
+  color: white;
+}
 header .basket {
   width: 100px;
   height: 100px;
@@ -28,14 +31,14 @@ header .basket a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #00000f;
+  color: inherit;
 }
 header .basket:hover {
   background-color: #e6d7cc;
 }
 header h1 {
   font-family: "Arial black";
-  color: #d6dbdf;
+  color: white;
   letter-spacing: 30pt;
   border: solid 2px #00000f;
   border-image: linear-gradient(to right, #b71c1c, #e65100, #ffca28) 9;
@@ -175,8 +178,7 @@ header nav ul {
   background-color: #e6d7cc;
 }
 #product_grid .category_card {
-  width: min-content;
-  min-width: 70%;
+  width: 70%;
   margin: 10px;
   background-color: white;
   display: flex;
@@ -184,6 +186,10 @@ header nav ul {
   justify-content: start;
   align-items: start;
   overflow: hidden;
+}
+#product_grid .category_card div {
+  width: 100%;
+  min-height: min-content;
 }
 #product_grid .category_card h1 {
   border-image: linear-gradient(to right, #b71c1c, #e65100, #ffca28) 9;
@@ -234,11 +240,15 @@ header nav ul {
 #product_grid .category_card .else_product p {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  overflow: hidden;
   color: white;
   margin: 0 30px 0 0;
 }
 #product_grid .category_card .else_product img {
   width: 100px;
+}
+#product_grid .category_card:hover {
+  background-color: #e6d7cc;
 }
 
 #product_closeup {
@@ -255,12 +265,35 @@ header nav ul {
 #product_closeup .top_description {
   border-left: 1px solid #00000f;
   padding-left: 30px;
+  min-width: 330px;
 }
 #product_closeup .top_description .product_date {
   color: #7a7a7a;
 }
+#product_closeup .top_description form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#product_closeup .top_description form label {
+  color: #7a7a7a;
+  font-size: 0.3em;
+}
+#product_closeup .top_description form input, #product_closeup .top_description form select {
+  font-size: 0.5em;
+  margin-bottom: 20px;
+}
+#product_closeup .top_description form #input_titre {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+#product_closeup .top_description form #input_artiste, #product_closeup .top_description form #input_pages {
+  font-weight: bold;
+  font-size: 1em;
+}
 #product_closeup .product_image_cd {
   width: 500px;
+  height: 500px;
   margin-right: 30px;
 }
 #product_closeup .product_image_dvd, #product_closeup .product_image_livre, #product_closeup .product_image_magazine {
@@ -309,6 +342,7 @@ header nav ul {
   border-radius: 20px;
   background-color: #005f1e;
   border: solid 3px rgba(245, 245, 245, 0.4);
+  color: white;
 }
 #product_closeup button a {
   font-size: 1.2em;
@@ -336,7 +370,7 @@ header nav ul {
 }
 
 #error_config {
-  background-color: #b71c1c;
+  background-color: #5f0009;
   width: 100%;
   text-align: center;
   color: white;
@@ -357,7 +391,7 @@ header nav ul {
   width: 200px;
 }
 #connexion_card p {
-  color: #b71c1c;
+  color: #5f0009;
 }
 #connexion_card #connexion_content {
   width: 100%;
@@ -446,7 +480,6 @@ header nav ul {
 
 .cart_title {
   text-align: center;
-  max-width: 200px;
   margin: auto;
   margin-top: 40px;
   color: white;
@@ -454,32 +487,58 @@ header nav ul {
 
 #cart_buttons {
   position: fixed;
-  width: 400px;
+  width: 650px;
   bottom: 30px;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -325px;
   background: transparent;
   border: none;
   display: flex;
 }
-#cart_buttons #add_to_emprunts, #cart_buttons #retour {
+#cart_buttons button {
   background: transparent;
   border: none;
 }
-#cart_buttons #add_to_emprunts a, #cart_buttons #retour a {
+#cart_buttons button a {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-  padding: 15px 50px;
-  background: linear-gradient(to right, #b71c1c, #e65100, #ffca28);
+  padding: 15px 15px;
+  background: #3e2b1a;
   border-radius: 30px;
   border: 3px solid white;
   font-size: 1.5em;
   text-decoration: none;
   color: white;
+  min-width: 100px;
 }
-#cart_buttons #retour a {
+#cart_buttons #add_to_emprunts a {
+  min-width: 300px;
+  background: #005f1e;
+  border-color: whitesmoke;
+  color: whitesmoke;
+}
+#cart_buttons #add_to_emprunts a:hover {
+  background: linear-gradient(to right, #b71c1c, #e65100, #ffca28);
+}
+#cart_buttons #back a:hover {
   background: #3d3d3d;
-  border-color: #7a7a7a;
-  color: #7a7a7a;
+}
+#cart_buttons #back a {
+  background: #00000f;
+  border-color: whitesmoke;
+  color: whitesmoke;
+}
+#cart_buttons #back a:hover {
+  background: #3d3d3d;
+}
+#cart_buttons #empty a {
+  background: #00000f;
+  border-color: whitesmoke;
+  color: whitesmoke;
+}
+#cart_buttons #empty a:hover {
+  background: #3d3d3d;
 }
 
 /*# sourceMappingURL=style.css.map */

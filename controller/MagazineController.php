@@ -63,11 +63,11 @@ class MagazineController extends AController
             $_SESSION["cart"] = array();
         }
 
-        if (!isset($_SESSION["cart"]["magazines"])) {
-            $_SESSION["cart"]["magazines"] = [];
+        if (!isset($_SESSION["cart"]["magazine"])) {
+            $_SESSION["cart"]["magazine"] = [];
         }
 
-        $_SESSION["cart"]["magazines"][] = $this->findById($id);
+        $_SESSION["cart"]["magazine"][] = $this->findById($id);
 
     }
 

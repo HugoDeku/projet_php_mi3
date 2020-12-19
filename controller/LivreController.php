@@ -33,11 +33,11 @@ class LivreController extends AController
             $_SESSION["cart"] = array();
         }
 
-        if (!isset($_SESSION["cart"]["livres"])) {
-            $_SESSION["cart"]["livres"] = [];
+        if (!isset($_SESSION["cart"]["livre"])) {
+            $_SESSION["cart"]["livre"] = [];
         }
 
-        $_SESSION["cart"]["livres"][] = $this->findById($id);
+        $_SESSION["cart"]["livre"][] = $this->findById($id);
 
     }
 

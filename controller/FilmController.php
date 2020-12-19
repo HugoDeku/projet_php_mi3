@@ -33,11 +33,11 @@ class FilmController extends AController
             $_SESSION["cart"] = array();
         }
 
-        if (!isset($_SESSION["cart"]["films"])) {
-            $_SESSION["cart"]["films"] = [];
+        if (!isset($_SESSION["cart"]["film"])) {
+            $_SESSION["cart"]["film"] = [];
         }
 
-        $_SESSION["cart"]["films"][] = $this->findById($id);
+        $_SESSION["cart"]["film"][] = $this->findById($id);
 
     }
 

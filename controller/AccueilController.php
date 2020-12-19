@@ -32,9 +32,9 @@ class AccueilController extends AController
 
         $categories = array(
             "musique" => $musiques,
-            "films" => $films,
-            "magazines" => $magazines,
-            "livres" => $livres);
+            "film" => $films,
+            "magazine" => $magazines,
+            "livre" => $livres);
         require (__DIR__."/../view/accueil.php");
     }
 
