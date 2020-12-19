@@ -11,4 +11,4 @@
     </nav>
 </div>
 
-<div class="basket"><a href="cart.php"><i class="fas fa-shopping-basket"></i> <div class="basket_nb">0</div></a></div>
+<div class="basket"><a href="index.php?controller=cart"><i class="fas fa-shopping-basket"></i> <div class="basket_nb">0</div></a></div>

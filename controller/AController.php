@@ -10,7 +10,7 @@ use \PDO;
 
 abstract class AController
 {
-    //protected PDOManager $manager;
+    //protected PDOBusiness $Business;
     protected $business;
 
     /**
@@ -22,7 +22,7 @@ abstract class AController
     }
 
     /**
-     * @param PDOBusiness $manager
+     * @param PDOBusiness $business
      */
     public function setBusiness(PDOBusiness $business): void
     {
@@ -35,7 +35,7 @@ abstract class AController
      */
     public function findById(int $id): ?Entity
     {
-        return($this->getManager()->findById($id));
+        return($this->getBusiness()->findById($id));
     }
 
     /**
@@ -43,7 +43,7 @@ abstract class AController
      */
     public function find(): PDOStatement
     {
-        return($this->getManager()->find());
+        return($this->getBusiness()->find());
     }
 
     /**
@@ -51,14 +51,14 @@ abstract class AController
      */
     public function findAll(): array
     {
-        return($this->getManager()->findAll(PDO::FETCH_ASSOC));
+        return($this->getBusiness()->findAll(PDO::FETCH_ASSOC));
     }
 
     /**
-     * @param Entity $o
+     * @param Entity $e
      */
     public function insert(Entity $e): void
     {
-        $this->getManager()->insert($e);
+        $this->getBusiness()->insert($e);
     }
 }
