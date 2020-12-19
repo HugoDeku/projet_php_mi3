@@ -31,8 +31,10 @@
 </div>
 
 <?php else:?>
+    <?php if(isset($error)) : ?>
+        <p id="error_config"><?=$error?></p>
+    <?php endif;?>
 <div id="config_container">
-
     <div class="table_container">
         <table id="music_table" class="config_table">
             <tr>
@@ -66,7 +68,7 @@
                     Actions
                 </th>
             </tr>
-            <form action="index.php?controller=musique&action=ajouter" method="post">
+            <form action="index.php?controller=musique&action=ajouter" method="post" enctype="multipart/form-data">
                 <tr class="table_add">
                     <td>
                         <input id="inputImage" name="image" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
@@ -155,49 +157,50 @@
                 </th>
             </tr>
 
-            <tr class="table_add">
-                <td>
-                    <input id="inputImage" value="image" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
-                    <img id="previewImage" class="img_magazine" src="#" />
-                </td>
-                <td>
-                    <input id="input_titre" onfocus="this.value=''" value="Titre" value="titre"/>
-                </td>
-                <td>
-                    <select id="input_period" name="periodicite">
-                        <option value="0">Annuel</option>
-                        <option value="1">Semestriel</option>
-                        <option value="2">Trimestriel</option>
-                        <option value="3">Quadrimestriel</option>
-                        <option value="4">Mensuel</option>
-                        <option value="5">Hebdomadaire</option>
-                    </select>
-                </td>
-                <td>
-                    <select id="input_month" name="month">
-                        <option value="01">Janvier</option>
-                        <option value="02">Février</option>
-                        <option value="03">Mars</option>
-                        <option value="04">Avril</option>
-                        <option value="05">Mai</option>
-                        <option value="06">Juin</option>
-                        <option value="07">Juillet</option>
-                        <option value="08">Août</option>
-                        <option value="09">Septembre</option>
-                        <option value="10">Octobre</option>
-                        <option value="11">Novembre</option>
-                        <option value="12">Décembre</option>
-                    </select>
-                    <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900" name="year"/>
-                </td>
-                <td>
-                    <input id="input_pages" type="number" min="1" onfocus="this.value=''" value="0" value="numero"/>
-                </td>
-                <td>
-                    <button class="button_add" value="submit" type="submit">Ajouter</button>
-                </td>
-            </tr>
-
+            <form action="index.php?controller=magazine&action=ajouter" method="post" enctype="multipart/form-data">
+                <tr class="table_add">
+                    <td>
+                        <input id="inputImage" name="image" type="file" accept=".jpg, .jpeg, .png"  onchange="setNewImage(this);"/>
+                        <img id="previewImage" class="img_magazine" src="#" />
+                    </td>
+                    <td>
+                        <input id="input_titre" onfocus="this.value=''" value="Titre" name="titre"/>
+                    </td>
+                    <td>
+                        <select id="input_period" name="periodicite">
+                            <option value="0">Annuel</option>
+                            <option value="1">Semestriel</option>
+                            <option value="2">Trimestriel</option>
+                            <option value="3">Quadrimestriel</option>
+                            <option value="4">Mensuel</option>
+                            <option value="5">Hebdomadaire</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="input_month" name="month">
+                            <option value="01">Janvier</option>
+                            <option value="02">Février</option>
+                            <option value="03">Mars</option>
+                            <option value="04">Avril</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juin</option>
+                            <option value="07">Juillet</option>
+                            <option value="08">Août</option>
+                            <option value="09">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+                        </select>
+                        <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900" name="year"/>
+                    </td>
+                    <td>
+                        <input id="input_pages" type="number" min="1" onfocus="this.value=''" value="0" name="numero"/>
+                    </td>
+                    <td>
+                        <button class="button_add" name="submit" type="submit">Ajouter</button>
+                    </td>
+                </tr>
+            </form>
             <?php foreach ($magazines as $magazine) {?>
             <tr class="table_product">
                 <td>

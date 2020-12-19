@@ -3,7 +3,7 @@
 
 abstract class Date
 {
-    public static function getStringMonthYear(int $month, int $year) : string{
+    public static function getStringMonthYear(string $month,string $year) : string{
         return ($year . "-" . $month);
     }
 

@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['newUser'])){
-    var_dump($_SESSION['newUser']);
-    unset($_SESSION['newUser']);
+if(isset($_SESSION['test'])){
+    var_dump($_SESSION['test']);
+    unset($_SESSION['test']);
 }
 
 if(isset($_SESSION['error'])){

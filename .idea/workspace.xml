@@ -5,9 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MagazineController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/MusiqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MusiqueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Date.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Date.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -57,7 +62,7 @@
       <workItem from="1608137464997" duration="1982000" />
       <workItem from="1608206651981" duration="3918000" />
       <workItem from="1608308459961" duration="645000" />
-      <workItem from="1608376142094" duration="18611000" />
+      <workItem from="1608376142094" duration="23864000" />
     </task>
     <servers />
   </component>
@@ -75,5 +80,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

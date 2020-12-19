@@ -368,6 +368,14 @@ header {
   background-color: $unavailable;
 }
 
+#error_config{
+  background-color: #b71c1c;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
 #connexion_card {
   background-color: transparent;
   border: 3px solid white;
