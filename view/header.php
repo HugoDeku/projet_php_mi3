@@ -18,7 +18,6 @@
     </nav>
 </div>
 
-<?php if (isset($_GET['controller']) && $_GET['controller'] != "cart") : ?>
 <div class="basket">
     <a href="index.php?controller=cart">
         <i class="fas fa-shopping-basket"></i>
@@ -33,4 +32,3 @@
         </div>
     </a>
 </div>
-<?php endif ?>

@@ -25,35 +25,24 @@
     <?php foreach ($categories as $category) {
         $category_name = array_search($category, $categories);
         foreach ($category as $item) { ?>
-            <?php if ($category_name == "musique"): ?>
-                <a href="index.php?controller=musique&action=afficher&id=<?= $item->getId() ?>">
-                    <div class="product_card cart_item">
-                        <img class="product_image_cd" src="<?= $item->getImage() ?>"/>
-                        <h2 class="product_name"><?= $item->getTitre() ?></h2>
-                        <p class="product_artist"><?= $item->getArtiste() ?></p>
-                        <p class="product_date"><?= $item->getYear() ?></p>
-                    </div>
-                </a>
-            <?php elseif ($category_name == "films") : ?>
-                <a href="index.php?controller=film&action=afficher&id=<?= $item->getId() ?>">
-                    <div class="product_card cart_item">
-                        <img class="product_image_dvd" src="<?= $item->getImage() ?>"/>
-                        <h2 class="product_name"><?= $item->getTitre() ?></h2>
-                        <p class="product_artist"><?= $item->getRealisateur() ?></p>
-                        <p class="product_date"><?= $item->getYear() ?></p>
-                    </div>
-                </a>
-            <?php elseif ($category_name == "livres") : ?>
-                <a href="index.php?controller=livre&action=afficher&id=<?= $item->getId() ?>">
-                    <div class="product_card cart_item">
-                        <img class="product_image_livre" src="<?= $item->getImage() ?>"/>
-                        <h2 class="product_name"><?= $item->getTitre() ?></h2>
-                        <p class="product_artist"><?= $item->getAuteur() ?></p>
-                        <p class="product_date"><?= $item->getYear() ?></p>
-                    </div>
-                </a>
-            <?php endif ?>
-
+            <div class="product_card cart_item">
+                <?php if ($category_name == "musique"): ?>
+                    <img class="product_image_cd" src="<?= $item->getImage() ?>"/>
+                    <h2 class="product_name"><?= $item->getTitre() ?></h2>
+                    <p class="product_artist"><?= $item->getArtiste() ?></p>
+                    <p class="product_date"><?= $item->getYear() ?></p>
+                <?php elseif ($category_name == "films") : ?>
+                    <img class="product_image_dvd" src="<?= $item->getImage() ?>"/>
+                    <h2 class="product_name"><?= $item->getTitre() ?></h2>
+                    <p class="product_artist"><?= $item->getRealisateur() ?></p>
+                    <p class="product_date"><?= $item->getYear() ?></p>
+                <?php elseif ($category_name == "livres") : ?>
+                    <img class="product_image_livre" src="<?= $item->getImage() ?>"/>
+                    <h2 class="product_name"><?= $item->getTitre() ?></h2>
+                    <p class="product_artist"><?= $item->getAuteur() ?></p>
+                    <p class="product_date"><?= $item->getYear() ?></p>
+                <?php endif ?>
+            </div>
         <?php }
     } ?>
 
