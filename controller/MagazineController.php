@@ -44,6 +44,8 @@ class MagazineController extends AController
             $target_file = "./view/data/magazine/" . $imageName;
             $err = move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
+            $_SESSION['preMagazine'] = $newMagazine;
+
             header("Location: index.php?controller=utilisateur&action=connexion");
         }catch(\Exception $error){
             $_SESSION['error'] = "Valeur manquante ou titre déjà utilisé";
@@ -67,8 +69,14 @@ class MagazineController extends AController
 
         $_SESSION["cart"]["magazines"][] = $this->findById($id);
 
-        var_dump($_SESSION["cart"]);
+    }
 
+    public function supprimer($id)
+    {
+        $magazine = $this->findById($id);
+        unlink($magazine->getImage());
+        $this->getBusiness()->delete($id);
+        header("Location: index.php?controller=utilisateur&action=connexion");
     }
 
 }

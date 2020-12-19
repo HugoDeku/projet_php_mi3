@@ -73,6 +73,9 @@ if (isset($_GET['controller'])) {
                             $controller->affichage();
                         }
                         break;
+                    case "supprimer":
+                        $controller->supprimer($_GET['id']);
+                        break;
                 }
             } else {
                 $controller->affichage();
@@ -98,6 +101,9 @@ if (isset($_GET['controller'])) {
                             $controller->cartProduct($_GET['id']);
                             $controller->affichage();
                         }
+                        break;
+                    case "supprimer":
+                        $controller->supprimer($_GET['id']);
                         break;
                 }
             } else {

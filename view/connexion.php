@@ -75,22 +75,22 @@
                         <img id="previewImage" class="img_music" src="#" />
                     </td>
                     <td>
-                        <input id="input_titre" onfocus="this.value=''" value="Titre de l'album" name="titre"/>
+                        <input id="input_titre" onfocus="this.value=''" value="<?=$premusique->getTitre()?>" name="titre"/>
                     </td>
                     <td>
-                        <input id="input_artiste" onfocus="this.value=''" value="Artiste" name="artiste"/>
+                        <input id="input_artiste" onfocus="this.value=''" value="<?=$premusique->getArtiste()?>" name="artiste"/>
                     </td>
                     <td>
-                        <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900" name="year"/>
+                        <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="<?=$premusique->getYear()?>" name="year"/>
                     </td>
                     <td>
-                        <input id="input_style" onfocus="this.value=''" value="Style" name="style"/>
+                        <input id="input_style" onfocus="this.value=''" value="<?=$premusique->getStyle()?>" name="style"/>
                     </td>
                     <td>
-                        <input id="input_pistes" type="number" onfocus="this.value=''" value="0" name="nbpiste"/>
+                        <input id="input_pistes" type="number" onfocus="this.value=''" value="<?=$premusique->getNbPiste()?>" name="nbpiste"/>
                     </td>
                     <td>
-                        <input id="input_stock" type="number" onfocus="this.value=''" value="0" name="stock"/>
+                        <input id="input_stock" type="number" onfocus="this.value=''" value="<?=$premusique->getStock()?>" name="stock"/>
                     </td>
                     <td>
                         <button class="button_add" type="submit" name="submit" >Ajouter</button>
@@ -122,7 +122,7 @@
                 </td>
                 <td>
                     <button class="button_update">Modifier</button>
-                    <button class="button_delete">Supprimer</button>
+                    <a href="index.php?controller=musique&action=supprimer&id=<?=$musique->getId()?>"><button class="button_delete" >Supprimer</button></a>
                 </td>
             </tr>
             <?php } ?>
@@ -164,16 +164,16 @@
                         <img id="previewImage" class="img_magazine" src="#" />
                     </td>
                     <td>
-                        <input id="input_titre" onfocus="this.value=''" value="Titre" name="titre"/>
+                        <input id="input_titre" onfocus="this.value=''" value="<?=$premagazine->getTitre()?>" name="titre"/>
                     </td>
                     <td>
-                        <select id="input_period" name="periodicite">
-                            <option value="0">Annuel</option>
-                            <option value="1">Semestriel</option>
-                            <option value="2">Trimestriel</option>
-                            <option value="3">Quadrimestriel</option>
-                            <option value="4">Mensuel</option>
-                            <option value="5">Hebdomadaire</option>
+                        <select id="input_period" name="periodicite" >
+                            <option value="0" <?php if($premagazine->getPeriodicite() == 0) echo "selected";?>>Annuel</option>
+                            <option value="1" <?php if($premagazine->getPeriodicite() == 1) echo "selected";?>>Semestriel</option>
+                            <option value="2" <?php if($premagazine->getPeriodicite() == 2) echo "selected";?>>>Trimestriel</option>
+                            <option value="3" <?php if($premagazine->getPeriodicite() == 3) echo "selected";?>>>Quadrimestriel</option>
+                            <option value="4" <?php if($premagazine->getPeriodicite() == 4) echo "selected";?>>>Mensuel</option>
+                            <option value="5" <?php if($premagazine->getPeriodicite() == 5) echo "selected";?>>>Hebdomadaire</option>
                         </select>
                     </td>
                     <td>
@@ -191,10 +191,10 @@
                             <option value="11">Novembre</option>
                             <option value="12">Décembre</option>
                         </select>
-                        <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900" name="year"/>
+                        <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="2000" name="year"/>
                     </td>
                     <td>
-                        <input id="input_pages" type="number" min="1" onfocus="this.value=''" value="0" name="numero"/>
+                        <input id="input_pages" type="number" min="1" onfocus="this.value=''" value="<?=$premagazine->getNumero()?>>" name="numero"/>
                     </td>
                     <td>
                         <button class="button_add" name="submit" type="submit">Ajouter</button>
@@ -223,7 +223,7 @@
                 </td>
                 <td>
                     <button class="button_update">Modifier</button>
-                    <button class="button_delete">Supprimer</button>
+                    <a href="index.php?controller=magazine&action=supprimer&id=<?=$magazine->getId()?>"><button class="button_delete" >Supprimer</button></a>
                 </td>
             </tr>
             <?php } ?>

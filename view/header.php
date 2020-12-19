@@ -18,17 +18,19 @@
     </nav>
 </div>
 
-<div class="basket">
-    <a href="index.php?controller=cart">
-        <i class="fas fa-shopping-basket"></i>
-        <div class="basket_nb">
-            <?php
-            if (isset($_SESSION['cart'])) {
-                echo sizeof($_SESSION['cart'], 1) - sizeof($_SESSION['cart']);
-            } else {
-                echo 0;
-            }
-            ?>
-        </div>
-    </a>
-</div>
+<?php if (isset($_GET['controller']) && $_GET['controller'] != "cart") : ?>
+    <div class="basket">
+        <a href="index.php?controller=cart">
+            <i class="fas fa-shopping-basket"></i>
+            <div class="basket_nb">
+                <?php
+                if (isset($_SESSION['cart'])) {
+                    echo sizeof($_SESSION['cart'], 1) - sizeof($_SESSION['cart']);
+                } else {
+                    echo 0;
+                }
+                ?>
+            </div>
+        </a>
+    </div>
+<?php endif ?>

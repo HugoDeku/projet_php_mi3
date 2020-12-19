@@ -296,17 +296,15 @@ header nav ul {
   border-radius: 15px;
   background-color: #005f1e;
 }
-
-.out_of_stock {
+#product_closeup .out_of_stock {
   color: #5f0009;
   border-bottom: solid 1px #5f0009;
 }
-.out_of_stock div {
+#product_closeup .out_of_stock div {
   border-left: solid 1px #5f0009;
   color: white;
 }
-
-.product_add_out {
+#product_closeup .product_add_out {
   background-color: #5f0009;
 }
 
@@ -423,6 +421,26 @@ header nav ul {
   max-width: 200px;
   margin: auto;
   margin-top: 40px;
+  color: white;
+}
+
+#add_to_emprunts {
+  position: fixed;
+  width: 200px;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -100px;
+  background: transparent;
+  border: none;
+}
+#add_to_emprunts a {
+  margin-top: 20px;
+  padding: 15px 50px;
+  background: linear-gradient(to right, #b71c1c, #e65100, #ffca28);
+  border-radius: 30px;
+  border: 3px solid white;
+  font-size: 1.5em;
+  text-decoration: none;
   color: white;
 }
 

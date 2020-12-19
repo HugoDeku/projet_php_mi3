@@ -357,21 +357,23 @@ header {
     background-color: $available;
   }
 
-}
+  .out_of_stock {
+    color: $unavailable;
+    border-bottom: solid 1px $unavailable;
 
-.out_of_stock {
-  color: $unavailable;
-  border-bottom: solid 1px $unavailable;
-
-  div {
-    border-left: solid 1px $unavailable;
-    color: white;
+    div {
+      border-left: solid 1px $unavailable;
+      color: white;
+    }
   }
+
+  .product_add_out {
+    background-color: $unavailable;
+  }
+
 }
 
-.product_add_out {
-  background-color: $unavailable;
-}
+
 
 #error_config{
   background-color: #b71c1c;
@@ -495,6 +497,28 @@ header {
   margin: auto;
   margin-top: 40px;
   color: white;
+}
+
+#add_to_emprunts {
+  position: fixed;
+  width: 200px;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -100px;
+
+  background: transparent;
+  border: none;
+  a {
+    margin-top: 20px;
+    padding: 15px 50px;
+    background: $omi_gradient;
+    border-radius: 30px;
+    border: 3px solid white;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+  }
+
 }
 
 

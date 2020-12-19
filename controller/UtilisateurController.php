@@ -10,6 +10,8 @@ require_once (__DIR__. '/../utils/PasswordHash.php');
 
 use mvc\model\business\MagazineBusiness;
 use mvc\model\business\MusiqueBusiness;
+use mvc\model\entities\Magazine;
+use mvc\model\entities\Musique;
 use mvc\model\entities\Utilisateur;
 use mvc\model\business\UtilisateurBusiness;
 use PDO;
@@ -50,6 +52,20 @@ class UtilisateurController extends AController
 
                 $musiques = ($musiqueBusiness->findAll(PDO::FETCH_ASSOC));
                 $magazines = ($magazineBusiness->findAll(PDO::FETCH_ASSOC));
+                if(isset($_SESSION['preMusique'])){
+                    $premusique = $_SESSION['preMusique'];
+                }else{
+                    $premusique = new Musique("Titre",30, "image.jpg", "Artiste", 2020,
+                    21, "Electro");
+                    $_SESSION['preMusique'] = $premusique;
+                }
+
+                if(isset($_SESSION['preMagazine'])){
+                    $premagazine = $_SESSION['preMagazine'];
+                }else{
+                    $premagazine = new Magazine("Titre", "image.png", 1, "2020-01", 0);
+                    $_SESSION['preMagazine'] = $premagazine;
+                }
             }
         }
         require(__DIR__."/../view/connexion.php");

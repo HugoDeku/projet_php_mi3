@@ -39,8 +39,6 @@ class FilmController extends AController
 
         $_SESSION["cart"]["films"][] = $this->findById($id);
 
-        var_dump($_SESSION["cart"]);
-
     }
 
 }

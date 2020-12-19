@@ -63,10 +63,10 @@ class MusiqueBusiness extends PDOBusiness
         return $res;
     }
 
-    public function delete(Entity $e) : PDOStatement
+    public function delete(int $id) : PDOStatement
     {
         $req = "DELETE FROM MUSIQUE WHERE id=:id";
-        $params = array("id"=>$e->getId());
+        $params = array("id"=>$id);
         $res=$this->executePrepare($req,$params);
         return $res;
     }

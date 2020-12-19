@@ -37,13 +37,14 @@ class MusiqueController extends AController
 
             $ext = strtolower(pathinfo(basename($_FILES["image"]["name"]),PATHINFO_EXTENSION));
             $imageName = strtolower(str_replace(" ", "",$titre)) . "." . $ext;
-            $newMagazine = new Musique($titre,$stock, $imageName, $artiste, $year, $nbpiste, $style);
-            $newMagazine->setImage($imageName);
-            $this->insert($newMagazine);
+            $newMusique = new Musique($titre,$stock, $imageName, $artiste, $year, $nbpiste, $style);
+            $newMusique->setImage($imageName);
+            $this->insert($newMusique);
 
             $target_file = "./view/data/musique/" . $imageName;
             $err = move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
+            $_SESSION['preMusique'] = $newMusique;
             header("Location: index.php?controller=utilisateur&action=connexion");
         }catch(\Exception $error){
             $_SESSION['error'] = "Valeur manquante ou titre déjà utilisé";
@@ -64,7 +65,13 @@ class MusiqueController extends AController
 
         $_SESSION["cart"]["musique"][] = $this->findById($id);
 
-        var_dump($_SESSION["cart"]);
+    }
 
+    public function supprimer($id)
+    {
+        $musique = $this->findById($id);
+        unlink($musique->getImage());
+        $this->getBusiness()->delete($id);
+        header("Location: index.php?controller=utilisateur&action=connexion");
     }
 }

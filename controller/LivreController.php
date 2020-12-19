@@ -39,8 +39,6 @@ class LivreController extends AController
 
         $_SESSION["cart"]["livres"][] = $this->findById($id);
 
-        var_dump($_SESSION["cart"]);
-
     }
 
 }
