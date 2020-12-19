@@ -7,7 +7,10 @@
         <div><a href="index.php?controller=film">Vidéo</a></div>
         <div><a href="index.php?controller=magazine">Magazines</a></div>
         <div><a href="index.php?controller=livre">Livres</a></div>
-        <div><a href="index.php?controller=utilisateur">Mon Compte</a></div>
+        <div><a href="index.php?controller=utilisateur">Mon Compte</a>
+        <?php if(isset($user)) : ?>
+            <div><a href="index.php?controller=utilisateur&action=deconnexion">Déconnnexion</a></div>
+        <?php endif;?>
     </nav>
 </div>
 

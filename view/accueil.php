@@ -16,6 +16,9 @@
 </header>
 
 <div id="product_grid">
+    <?php if(isset($user)) : ?>
+        <h1>Bonjour <?=$user->getPseudo()?> !</h1>
+    <?php endif;?>
     <!--todo: itérer pour chaque catégorie-->
     <div class="category_card">
         <h1>Notre top de la semaine</h1>

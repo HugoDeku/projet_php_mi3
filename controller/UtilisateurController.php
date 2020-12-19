@@ -4,6 +4,7 @@ namespace mvc\controller;
 
 require_once('AController.php');
 require_once(__DIR__ . '/../model/business/UtilisateurBusiness.php');
+require_once (__DIR__. '/../utils/PasswordHash.php');
 
 use mvc\model\entities\Utilisateur;
 use mvc\model\business\UtilisateurBusiness;
@@ -20,6 +21,14 @@ class UtilisateurController extends AController
         if($user == null){
             $_SESSION['error'] = 'Utilisateur introuvable';
             header ("Location: index.php?controller=utilisateur&action=connexion");
+        }else{
+            if($user->getMotdepasse() == \PasswordHash::passwordToHash($motdepasse)){
+                $_SESSION['user'] = $user;
+                header ("Location: index.php");
+            }else{
+                $_SESSION['error'] = 'Mot de passe incorrect';
+                header ("Location: index.php?controller=utilisateur&action=connexion");
+            }
         }
     }
 

@@ -23,6 +23,12 @@ if (isset($_GET['controller'])) {
                             }
                         }
                         break;
+                    case 'deconnexion':
+                        if(isset($_SESSION['user'])){
+                            unset($_SESSION['user']);
+                            $controller->affichage();
+                        }
+                        break;
                 }
             } else {
                 $controller->affichage();
