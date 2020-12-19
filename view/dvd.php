@@ -17,12 +17,14 @@
 <div id="product_grid">
 
     <?php foreach ($films as $dvd) { ?>
-    <div class="product_card">
-        <img class="product_image_dvd" src="<?=$dvd->getImage()?>"/>
-        <h2 class="product_name"><?=$dvd->getTitre()?></h2>
-        <p class="product_artist"><?=$dvd->getRealisateur()?></p>
-        <p class="product_date"><?=$dvd->getYear()?></p>
-    </div>
+        <a href="index.php?controller=film&action=afficher&id=<?= $dvd->getId() ?>">
+            <div class="product_card">
+                <img class="product_image_dvd" src="<?= $dvd->getImage() ?>"/>
+                <h2 class="product_name"><?= $dvd->getTitre() ?></h2>
+                <p class="product_artist"><?= $dvd->getRealisateur() ?></p>
+                <p class="product_date"><?= $dvd->getYear() ?></p>
+            </div>
+        </a>
     <?php } ?>
 
 </div>

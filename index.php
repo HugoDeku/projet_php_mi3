@@ -29,21 +29,21 @@ if (isset($_GET['controller'])) {
                         } else {
                             if (isset($_POST["login"]) && isset($_POST["motdepasse"])) {
                                 $controller->connexion($_POST["login"], $_POST["motdepasse"]);
-                            }else{
+                            } else {
                                 $controller->affichageConnexion();
                             }
                         }
                         break;
                     case 'deconnexion':
-                        if(isset($_SESSION['user'])){
+                        if (isset($_SESSION['user'])) {
                             unset($_SESSION['user']);
                             $controller->affichageConnexion();
                         }
                         break;
                     case 'inscription':
-                        if(isset($_POST['email']) && isset($_POST['login']) && isset($_POST['motdepasse'])){
+                        if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['motdepasse'])) {
                             $controller->inscription($_POST['email'], $_POST['login'], $_POST['motdepasse']);
-                        }else{
+                        } else {
                             $controller->affichageInscription();
                         }
                         break;
@@ -52,41 +52,71 @@ if (isset($_GET['controller'])) {
             break;
         case 'magazine':
             $controller = new MagazineController();
-            if(isset($_GET['action'])){
-                switch($_GET['action']){
+            if (isset($_GET['action'])) {
+                switch ($_GET['action']) {
                     case "ajouter":
-                        if(isset($_POST['submit'])){
+                        if (isset($_POST['submit'])) {
                             $controller->addProduit($_POST['image'], $_POST['titre'], $_POST['periodicite'], $_POST['month']
                                 , $_POST['year'], $_POST['numero']);
                         }
                         break;
+                    case "afficher":
+                        if (isset($_GET['id'])) {
+                            $controller->showProduct($_GET['id']);
+                        }
+                        break;
                 }
-            }else{
+            } else {
                 $controller->affichage();
             }
             break;
         case 'musique':
             $controller = new MusiqueController();
-            if(isset($_GET['action'])){
-                switch($_GET['action']){
+            if (isset($_GET['action'])) {
+                switch ($_GET['action']) {
                     case "ajouter":
-                        if(isset($_POST['submit'])){
+                        if (isset($_POST['submit'])) {
                             $controller->addProduit($_POST['image'], $_POST['titre'], $_POST['artiste'], $_POST['year']
-                            , $_POST['style'], $_POST['nbpiste'], $_POST['stock']);
+                                , $_POST['style'], $_POST['nbpiste'], $_POST['stock']);
+                        }
+                        break;
+                    case "afficher":
+                        if (isset($_GET['id'])) {
+                            $controller->showProduct($_GET['id']);
                         }
                         break;
                 }
-            }else{
+            } else {
                 $controller->affichage();
             }
             break;
         case 'film':
             $controller = new FilmController();
-            $controller->affichage();
+            if (isset($_GET['action'])) {
+                switch ($_GET['action']) {
+                    case "afficher":
+                        if (isset($_GET['id'])) {
+                            $controller->showProduct($_GET['id']);
+                        }
+                        break;
+                }
+            } else {
+                $controller->affichage();
+            }
             break;
         case 'livre':
             $controller = new LivreController();
-            $controller->affichage();
+            if (isset($_GET['action'])) {
+                switch ($_GET['action']) {
+                    case "afficher":
+                        if (isset($_GET['id'])) {
+                            $controller->showProduct($_GET['id']);
+                        }
+                        break;
+                }
+            } else {
+                $controller->affichage();
+            }
             break;
         default:
             $controller = new AccueilController();

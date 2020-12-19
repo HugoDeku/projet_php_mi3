@@ -2,7 +2,7 @@
 
 namespace mvc\controller;
 
-require_once(__DIR__.'/../model/business/MusiqueBusiness.php');
+require_once(__DIR__ . '/../model/business/MusiqueBusiness.php');
 
 use mvc\model\business\MusiqueBusiness;
 use mvc\model\entities\Entity;
@@ -16,9 +16,16 @@ class MusiqueController extends AController
         $this->business = new MusiqueBusiness();
     }
 
-    public function affichage(){
+    public function affichage()
+    {
         $musiques = $this->findAll();
-        require (__DIR__."/../view/cd.php");
+        require(__DIR__ . "/../view/cd.php");
+    }
+
+    public function showProduct(int $id)
+    {
+        $cd = $this->findById($id);
+        require(__DIR__ . "/../view/cd_produit.php");
     }
 
     public function addProduit($image, $titre, $artiste, $year, $style, $nbpiste, $stock)

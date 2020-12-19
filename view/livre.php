@@ -18,19 +18,21 @@
 <div id="product_grid">
 
     <?php foreach ($livres as $livre) { ?>
-    <div class="product_card">
-        <img class="product_image_livre" src="<?=$livre->getImage()?>"/>
-        <h2 class="product_name"><?=$livre->getTitre()?></h2>
-        <p class="product_artist"><?=$livre->getAuteur()?></p>
-        <p class="product_date"><?=$livre->getYear()?></p>
-    </div>
+        <a href="index.php?controller=livre&action=afficher&id=<?= $livre->getId() ?>">
+            <div class="product_card">
+                <img class="product_image_livre" src="<?= $livre->getImage() ?>"/>
+                <h2 class="product_name"><?= $livre->getTitre() ?></h2>
+                <p class="product_artist"><?= $livre->getAuteur() ?></p>
+                <p class="product_date"><?= $livre->getYear() ?></p>
+            </div>
+        </a>
     <?php } ?>
 
 </div>
-    <footer id="footer">
-        <?php
-        include 'footer.php';
-        ?>
-    </footer>
+<footer id="footer">
+    <?php
+    include 'footer.php';
+    ?>
+</footer>
 </body>
 </html>

@@ -16,6 +16,12 @@ class LivreController extends AController
         $this->business = new LivreBusiness();
     }
 
+    public function showProduct(int $id)
+    {
+        $livre = $this->findById($id);
+        require(__DIR__ . "/../view/livre_produit.php");
+    }
+
     public function affichage(){
         $livres = $this->findAll();
         require (__DIR__."/../view/livre.php");

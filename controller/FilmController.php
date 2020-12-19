@@ -16,6 +16,12 @@ class FilmController extends AController
         $this->business = new FilmBusiness();
     }
 
+    public function showProduct(int $id)
+    {
+        $dvd = $this->findById($id);
+        require(__DIR__ . "/../view/dvd_produit.php");
+    }
+
     public function affichage(){
         $films = $this->findAll();
         require (__DIR__."/../view/dvd.php");

@@ -21,6 +21,12 @@ class MagazineController extends AController
         require (__DIR__."/../view/magazine.php");
     }
 
+    public function showProduct(int $id)
+    {
+        $magazine = $this->findById($id);
+        require(__DIR__ . "/../view/magazine_produit.php");
+    }
+
     public function addProduit($image, $titre, $periodicite, $month, $year, $numero)
     {
 

@@ -38,20 +38,7 @@
     </div>
     <div class="product_description">
         <h2>Plus d'informations</h2>
-        <p><?php if($cd->getStock() > 0):?>
-        <div class="stock">
-            <i class="fas fa-check-circle"></i>
-            <div>En stock</div>
-        </div>
-        <button class="product_add">Ajouter au panier</button>
-        <?php else:?>
-        <div class="stock out_of_stock">
-            <i class="fas fa-times-circle"></i>
-            <div>.</div>
-        </div>
-        <button class="product_add_out">Bientôt disponible</button>
-        <?php endif ?></p>
-        <p><?=$cd->getNbPiste()?></p>
+        <p><?=$cd->getNbPiste()?> pistes</p>
     </div>
 </div>
 
