@@ -172,6 +172,9 @@ if (isset($_GET['controller'])) {
                         $controller->emptyCart();
                         $controller->affichage();
                         break;
+                    case "valider":
+                        $controller->validCart();
+                        break;
                 }
             } else {
                 $controller->affichage();

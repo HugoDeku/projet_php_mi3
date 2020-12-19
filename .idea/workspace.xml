@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29d56c1-cbe3-459a-9ca5-4397c6cb2ff7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/data/magazine/dinosauredusoleil.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MagazineController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MusiqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MusiqueController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cd_modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cd_modif.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/data/magazine/paper.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/magazine_modif.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/magazine_modif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cart.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -35,4 +35,13 @@ class CartController extends AController
         }
     }
 
+    public function validCart()
+    {
+        if(isset($_SESSION['cart'])){
+
+        }else{
+            header("Location: index.php?controller=cart");
+        }
+    }
+
 }
