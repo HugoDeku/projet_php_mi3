@@ -18,7 +18,7 @@
 <div id="product_grid">
 
     <?php foreach ($musiques as $cd) { ?>
-        <a href="index.php?controller=musique&action=afficher">
+        <a href="index.php?controller=musique&action=afficher&id=<?=$cd->getId()?>">
             <div class="product_card">
                 <img class="product_image_cd" src="<?=$cd->getImage()?>"/>
                 <h2 class="product_name"><?=$cd->getTitre()?></h2>
