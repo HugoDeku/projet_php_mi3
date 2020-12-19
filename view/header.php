@@ -8,7 +8,7 @@
         <div><a href="index.php?controller=film">Films</a></div>
         <div><a href="index.php?controller=magazine">Magazines</a></div>
         <div><a href="index.php?controller=livre">Livres</a></div>
-        <div><i class="account fas fa-user-circle"></i>
+        <div id="account_div"><i class="account fas fa-user-circle"></i>
         <?php if (isset($_SESSION['user']) && $_SESSION['user']->isAdmin()) : ?>
             <a href="index.php?controller=utilisateur&action=connexion">Configuration</a>
         <?php elseif (!isset($_SESSION['user'])): ?>
@@ -21,7 +21,7 @@
     </nav>
 </div>
 
-<?php if (isset($_GET['controller']) && $_GET['controller'] != "cart" && $_GET['controller'] != "utilisateur" && (isset($_GET['action']) && isset($_GET['action']) != "modifier")) : ?>
+<?php if (isset($_GET['controller']) && $_GET['controller'] != "cart" && $_GET['controller'] != "utilisateur" || (isset($_GET['action']) && isset($_GET['action']) != "modifier")) : ?>
     <div class="basket">
         <a href="index.php?controller=cart">
             <i class="fas fa-shopping-basket"></i>

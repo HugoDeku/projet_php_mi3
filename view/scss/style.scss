@@ -77,16 +77,22 @@ header {
     display: flex;
     border-bottom: 1px solid white;
 
+    #account_div {
+      padding: 0px 10px 0px 15px;
+      background-color: rgba(177, 146, 123, 0.21);
+    }
+
     .active {
       border-bottom: solid 3px $font_color;
     }
 
     div {
       min-width: 50px;
-      max-width: 200px;
+      max-width: 400px;
       padding: 0px 5% 0px 5%;
       height: 100%;
       margin: auto;
+      margin-bottom: 5px;
 
       display: flex;
       justify-content: center;
@@ -98,7 +104,6 @@ header {
         text-decoration: none;
         font-weight: bold;
         color: white;
-        display: flex;
 
         display: flex;
         justify-content: center;
@@ -491,10 +496,13 @@ header {
     button {
       margin-top: 20px;
       height: 25px;
-      background: $omi_gradient;
+      background: $brown;
       border-radius: 15px;
       border: 3px solid white;
       color: white;
+    }
+    button:hover {
+      background: $omi_gradient;
     }
   }
 }

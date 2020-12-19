@@ -52,15 +52,20 @@ header nav {
   display: flex;
   border-bottom: 1px solid white;
 }
+header nav #account_div {
+  padding: 0px 10px 0px 15px;
+  background-color: rgba(177, 146, 123, 0.21);
+}
 header nav .active {
   border-bottom: solid 3px #d6dbdf;
 }
 header nav div {
   min-width: 50px;
-  max-width: 200px;
+  max-width: 400px;
   padding: 0px 5% 0px 5%;
   height: 100%;
   margin: auto;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +76,6 @@ header nav div a {
   text-decoration: none;
   font-weight: bold;
   color: white;
-  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,10 +409,13 @@ header nav ul {
 #connexion_card #connexion_content button {
   margin-top: 20px;
   height: 25px;
-  background: linear-gradient(to right, #b71c1c, #e65100, #ffca28);
+  background: #3e2b1a;
   border-radius: 15px;
   border: 3px solid white;
   color: white;
+}
+#connexion_card #connexion_content button:hover {
+  background: linear-gradient(to right, #b71c1c, #e65100, #ffca28);
 }
 
 #already_registered {
