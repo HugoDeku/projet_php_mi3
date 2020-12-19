@@ -16,22 +16,17 @@
 
 <div id="product_closeup">
     <div class="top_info">
-        <img class="product_image_magazine" src="data/magazine/vogue.png"/>
+        <img class="product_image_magazine" src="<?=$magazine->getYear()?>"/>
         <div class="top_description">
-            <h2 class="product_name">VOGUE</h2>
-            <p class="product_number">2211</p>
-            <p class="product_date">Décembre 2020</p>
-            <div class="stock">
-                <i class="fas fa-check-circle"></i>
-                <div>En stock</div>
-            </div>
-            <button class="product_add">Ajouter au panier</button>
+            <h2 class="product_name"><?=$magazine->getTitre()?></h2>
+            <p class="product_number"><?=$magazine->getNumero()?></p>
+            <p class="product_date"><?=$magazine->getDateParution()?></p>
         </div>
 
     </div>
     <div class="product_description">
         <h2>Plus d'informations</h2>
-        <p>Mensuel</p>
+        <p><?=$magazine->getPeriodicite()?></p>
     </div>
 </div>
 

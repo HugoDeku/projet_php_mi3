@@ -16,21 +16,29 @@
 
 <div id="product_closeup">
     <div class="top_info">
-        <img class="product_image_dvd" src="data/video/harrypotter.jpg"/>
+        <img class="product_image_dvd" src="<?=$dvd->getImage()?>"/>
         <div class="top_description">
-            <h2 class="product_name">Harry Potter et la Coupe de Feu</h2>
-            <p class="product_artist">Mike Newell</p>
-            <p class="product_date">2005</p>
-            <div class="stock">
-                <i class="fas fa-check-circle"></i>
-                <div>En stock</div>
-            </div>
-            <button class="product_add">Ajouter au panier</button>
+            <h2 class="product_name"><?=$dvd->getTitre()?></h2>
+            <p class="product_artist"><?=$dvd->getRealisateur()?></p>
+            <p class="product_date"><?=$dvd->getYear()?></p>
+            <?php if($dvd->getStock() > 0):?>
+                <div class="stock">
+                    <i class="fas fa-check-circle"></i>
+                    <div>En stock</div>
+                </div>
+                <button class="product_add">Ajouter au panier</button>
+            <?php else:?>
+                <div class="stock out_of_stock">
+                    <i class="fas fa-times-circle"></i>
+                    <div>.</div>
+                </div>
+                <button class="product_add_out">Bientôt disponible</button>
+            <?php endif ?>
         </div>
     </div>
     <div class="product_description">
         <h2>Plus d'informations</h2>
-        <p>Daniel Radcliffe</p>
+        <p><?=$dvd->getActeur()?></p>
     </div>
 </div>
 

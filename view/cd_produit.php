@@ -16,22 +16,42 @@
 
 <div id="product_closeup">
     <div class="top_info">
-        <img class="product_image_cd" src="data/musique/joshua.jpg"/>
+        <img class="product_image_cd" src="<?=$cd->getImage()?>"/>
         <div class="top_description">
-            <h2 class="product_name">Joshua</h2>
-            <p class="product_artist">French 79</p>
-            <p class="product_date">2019</p>
+            <h2 class="product_name"><?=$cd->getTitre()?></h2>
+            <p class="product_artist"><?=$cd->getArtiste()?></p>
+            <p class="product_date"><?=$cd->getYear()?></p>
+            <?php if($cd->getStock() > 0):?>
             <div class="stock">
                 <i class="fas fa-check-circle"></i>
                 <div>En stock</div>
             </div>
             <button class="product_add">Ajouter au panier</button>
+            <?php else:?>
+            <div class="stock out_of_stock">
+                <i class="fas fa-times-circle"></i>
+                <div>.</div>
+            </div>
+            <button class="product_add_out">Bientôt disponible</button>
+            <?php endif ?>
         </div>
     </div>
     <div class="product_description">
         <h2>Plus d'informations</h2>
-        <p>Électronique</p>
-        <p>12 Pistes</p>
+        <p><?php if($cd->getStock() > 0):?>
+        <div class="stock">
+            <i class="fas fa-check-circle"></i>
+            <div>En stock</div>
+        </div>
+        <button class="product_add">Ajouter au panier</button>
+        <?php else:?>
+        <div class="stock out_of_stock">
+            <i class="fas fa-times-circle"></i>
+            <div>.</div>
+        </div>
+        <button class="product_add_out">Bientôt disponible</button>
+        <?php endif ?></p>
+        <p><?=$cd->getNbPiste()?></p>
     </div>
 </div>
 

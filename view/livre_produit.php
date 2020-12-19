@@ -16,22 +16,30 @@
 
 <div id="product_closeup">
     <div class="top_info">
-        <img class="product_image_livre" src="data/livre/lepetitprince.jpg"/>
+        <img class="product_image_livre" src="<?=$livre->getImage()?>"/>
         <div class="top_description">
-            <h2 class="product_name">Le Petit Prince</h2>
-            <p class="product_artist">Antoinde de Saint-Exupéry</p>
-            <p class="product_date">1943</p>
-            <div class="stock">
-                <i class="fas fa-check-circle"></i>
-                <div>En stock</div>
-            </div>
-            <button class="product_add">Ajouter au panier</button>
+            <h2 class="product_name"><?=$livre->getTitre()?></h2>
+            <p class="product_artist"><?=$livre->getAuteur()?></p>
+            <p class="product_date"><?=$livre->getYear()?></p>
+            <?php if($livre->getStock() > 0):?>
+                <div class="stock">
+                    <i class="fas fa-check-circle"></i>
+                    <div>En stock</div>
+                </div>
+                <button class="product_add">Ajouter au panier</button>
+            <?php else:?>
+                <div class="stock out_of_stock">
+                    <i class="fas fa-times-circle"></i>
+                    <div>.</div>
+                </div>
+                <button class="product_add_out">Bientôt disponible</button>
+            <?php endif ?>
         </div>
     </div>
     <div class="product_description">
         <h2>Plus d'informations</h2>
-        <p>Roman</p>
-        <p>93 pages</p>
+        <p><?=$livre->getType()?></p>
+        <p><?=$livre->getPages()?></p>
     </div>
 </div>
 

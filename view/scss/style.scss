@@ -161,6 +161,11 @@ header {
   justify-content: center;
   align-items: start;
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .product_card {
     margin: 10px;
     background-color: rgb(255, 255, 255);
@@ -170,7 +175,6 @@ header {
     align-items: flex-start;
     padding: 30px 30px 10px;
     border-bottom: solid 30px $brown;
-
     * {
       max-width: 200px;
     }
@@ -348,6 +352,20 @@ header {
     background-color: $available;
   }
 
+}
+
+.out_of_stock {
+  color: $unavailable;
+  border-bottom: solid 1px $unavailable;
+
+  div {
+    border-left: solid 1px $unavailable;
+    color: white;
+  }
+}
+
+.product_add_out {
+  background-color: $unavailable;
 }
 
 #connexion_card {

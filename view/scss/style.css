@@ -123,6 +123,10 @@ header nav ul {
   justify-content: center;
   align-items: start;
 }
+#product_grid a {
+  text-decoration: none;
+  color: inherit;
+}
 #product_grid .product_card {
   margin: 10px;
   background-color: white;
@@ -286,6 +290,19 @@ header nav ul {
   height: 40px;
   border-radius: 15px;
   background-color: #005f1e;
+}
+
+.out_of_stock {
+  color: #5f0009;
+  border-bottom: solid 1px #5f0009;
+}
+.out_of_stock div {
+  border-left: solid 1px #5f0009;
+  color: white;
+}
+
+.product_add_out {
+  background-color: #5f0009;
 }
 
 #connexion_card {

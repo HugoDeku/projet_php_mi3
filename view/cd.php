@@ -18,12 +18,14 @@
 <div id="product_grid">
 
     <?php foreach ($musiques as $cd) { ?>
-    <div href="index.php?controller=musique&action=afficher&id=<?=$cd->getId()?>" class="product_card">
-        <img class="product_image_cd" src="<?=$cd->getImage()?>"/>
-        <h2 class="product_name"><?=$cd->getTitre()?></h2>
-        <p class="product_artist"><?=$cd->getArtiste()?></p>
-        <p class="product_date"><?=$cd->getYear()?></p>
-    </div>
+        <a href="index.php?controller=musique&action=afficher">
+            <div class="product_card">
+                <img class="product_image_cd" src="<?=$cd->getImage()?>"/>
+                <h2 class="product_name"><?=$cd->getTitre()?></h2>
+                <p class="product_artist"><?=$cd->getArtiste()?></p>
+                <p class="product_date"><?=$cd->getYear()?></p>
+            </div>
+        </a>
     <?php } ?>
 
 </div>
