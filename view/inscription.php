@@ -19,18 +19,18 @@
 // Si l'utilisateur n'est pas connecté
 <div id="connexion_card">
     <h1>Inscription</h1>
-    <form id="connexion_content" action="action.php" method="post">
+    <form id="connexion_content" action="index.php?controller=utilisateur&action=inscription" method="post">
         <label>Email</label>
-        <input type="text" id="inputEmail"/>
+        <input type="text" id="inputEmail" name="email"/>
         <label>Login</label>
-        <input type="text" id="inputLogin"/>
+        <input type="text" id="inputLogin" name="login"/>
         <label>Password</label>
-        <input type="password" id="inputPassword"/>
+        <input type="password" id="inputPassword" name="motdepasse"/>
         <button id="btnSubmitConnexion">S'inscrire</button>
     </form>
 </div>//envoyer vers connexion.php
 <div id="already_registered">
-    <a href="connexion.php">Déjà inscrit?</a>
+    <a href="index.php?controller=utilisateur&action=connexion">Déjà inscrit?</a>
 </div>
 
 <footer id="footer">

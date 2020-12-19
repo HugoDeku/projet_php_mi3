@@ -16,6 +16,7 @@
 </header>
 
 // Si l'utilisateur n'est pas connecté
+<?php if(!isset($user)) : ?>
 <div id="connexion_card">
     <h1>Connexion</h1>
     <form id="connexion_content" action="index.php?controller=utilisateur&action=connexion" method="post">
@@ -30,6 +31,7 @@
     </form>
 </div>
 
+<?php else:?>
 //Si l'utilisateur est connecté
 <div id="config_container">
 
@@ -391,6 +393,7 @@
     </div>
 
 </div>
+<?php endif;?>
 
 <footer id="footer">
     <?php

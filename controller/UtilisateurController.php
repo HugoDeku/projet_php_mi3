@@ -32,12 +32,19 @@ class UtilisateurController extends AController
         }
     }
 
-    public function affichage(){
+    public function affichageConnexion(){
         if(isset($_SESSION['error'])){
             $error = $_SESSION['error'];
             unset($_SESSION['error']);
         }
+        if(isset($_SESSION['user'])){
+            $user = $_SESSION['user'];
+        }
         require(__DIR__."/../view/connexion.php");
+    }
+
+    public function affichageInscription(){
+        require(__DIR__."/../view/inscription.php");
     }
 
 

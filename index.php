@@ -23,22 +23,25 @@ if (isset($_GET['controller'])) {
                 switch ($_GET['action']) {
                     case 'connexion':
                         if (isset($_SESSION['error'])) {
-                            $controller->affichage();
+                            $controller->affichageConnexion();
                         } else {
                             if (isset($_POST["login"]) && isset($_POST["motdepasse"])) {
                                 $controller->connexion($_POST["login"], $_POST["motdepasse"]);
+                            }else{
+                                $controller->affichageConnexion();
                             }
                         }
                         break;
                     case 'deconnexion':
                         if(isset($_SESSION['user'])){
                             unset($_SESSION['user']);
-                            $controller->affichage();
+                            $controller->affichageConnexion();
                         }
                         break;
+                    case 'inscription':
+                        $controller->affichageInscription();
+                        break;
                 }
-            } else {
-                $controller->affichage();
             }
             break;
         case 'magazine':
