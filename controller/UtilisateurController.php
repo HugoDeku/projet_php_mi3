@@ -4,10 +4,15 @@ namespace mvc\controller;
 
 require_once('AController.php');
 require_once(__DIR__ . '/../model/business/UtilisateurBusiness.php');
+require_once(__DIR__ . '/../model/business/MusiqueBusiness.php');
+require_once(__DIR__ . '/../model/business/MagazineBusiness.php');
 require_once (__DIR__. '/../utils/PasswordHash.php');
 
+use mvc\model\business\MagazineBusiness;
+use mvc\model\business\MusiqueBusiness;
 use mvc\model\entities\Utilisateur;
 use mvc\model\business\UtilisateurBusiness;
+use PDO;
 
 class UtilisateurController extends AController
 {
@@ -39,6 +44,13 @@ class UtilisateurController extends AController
         }
         if(isset($_SESSION['user'])){
             $user = $_SESSION['user'];
+            if($user->isAdmin()){
+                $musiqueBusiness = new MusiqueBusiness();
+                $magazineBusiness = new MagazineBusiness();
+
+                $musiques = ($musiqueBusiness->findAll(PDO::FETCH_ASSOC));
+                $magazines = ($magazineBusiness->findAll(PDO::FETCH_ASSOC));
+            }
         }
         require(__DIR__."/../view/connexion.php");
     }

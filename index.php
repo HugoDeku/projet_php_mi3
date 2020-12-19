@@ -6,6 +6,8 @@ require_once(__DIR__ . "/controller/MagazineController.php");
 require_once(__DIR__ . "/controller/MusiqueController.php");
 require_once(__DIR__ . "/controller/LivreController.php");
 require_once(__DIR__ . "/controller/FilmController.php");
+require_once(__DIR__ . "/utils/Enum.php");
+require_once(__DIR__ . "/utils/Date.php");
 
 use mvc\controller\AccueilController;
 use mvc\controller\UtilisateurController;

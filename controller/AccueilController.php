@@ -12,6 +12,7 @@ use mvc\model\business\MagazineBusiness;
 use mvc\model\business\LivreBusiness;
 use mvc\model\business\MusiqueBusiness;
 use mvc\model\business\FilmBusiness;
+use PDO;
 
 class AccueilController extends AController
 {
@@ -19,15 +20,15 @@ class AccueilController extends AController
         if(isset($_SESSION['user'])){
             $user = $_SESSION['user'];
         }
-        $musiqueController = new MusiqueController();
-        $filmController = new FilmController();
-        $livreController = new LivreController();
-        $magazineController = new MagazineController();
+        $musiqueBusiness = new MusiqueBusiness();
+        $filmBusiness = new FilmBusiness();
+        $livreBusiness = new LivreBusiness();
+        $magazineBusiness = new MagazineBusiness();
 
-        $musiques = ($musiqueController->findAll());
-        $films = ($filmController->findAll());
-        $livres = ($livreController->findAll());
-        $magazines = ($magazineController->findAll());
+        $musiques = ($musiqueBusiness->findAll(PDO::FETCH_ASSOC));
+        $films = ($filmBusiness->findAll(PDO::FETCH_ASSOC));
+        $livres = ($livreBusiness->findAll(PDO::FETCH_ASSOC));
+        $magazines = ($magazineBusiness->findAll(PDO::FETCH_ASSOC));
 
         $categories = array(
             "musique" => $musiques,

@@ -7,9 +7,9 @@
         <div><a href="index.php?controller=film">Films</a></div>
         <div><a href="index.php?controller=magazine">Magazines</a></div>
         <div><a href="index.php?controller=livre">Livres</a></div>
-        <?php if(isset($_SESSION['user'])) : ?>
+        <?php if(isset($_SESSION['user']) && $_SESSION['user']->isAdmin()) : ?>
             <div><a href="index.php?controller=utilisateur&action=connexion">Mon Compte</a>
-        <?php else:?>
+        <?php elseif (!isset($_SESSION['user'])):?>
             <div><a href="index.php?controller=utilisateur&action=inscription">Mon Compte</a>
         <?php endif;?>
         <?php if(isset($_SESSION['user'])) : ?>
