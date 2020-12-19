@@ -342,14 +342,7 @@
                     <input id="input_titre" onfocus="this.value=''" value="Titre"/>
                 </td>
                 <td>
-                    <select id="input_period">
-                        <option value="0">Annuel</option>
-                        <option value="1">Semestriel</option>
-                        <option value="2">Trimestriel</option>
-                        <option value="3">Quadrimestriel</option>
-                        <option value="4">Mensuel</option>
-                        <option value="5">Hebdomadaire</option>
-                    </select>
+
                 </td>
                 <td>
                     <input id="input_date" onfocus="this.value=''" value="mois 1900"/>
