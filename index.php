@@ -6,6 +6,7 @@ require_once(__DIR__ . "/controller/MagazineController.php");
 require_once(__DIR__ . "/controller/MusiqueController.php");
 require_once(__DIR__ . "/controller/LivreController.php");
 require_once(__DIR__ . "/controller/FilmController.php");
+require_once(__DIR__ . "/controller/CartController.php");
 require_once(__DIR__ . "/utils/Enum.php");
 require_once(__DIR__ . "/utils/Date.php");
 
@@ -15,6 +16,7 @@ use mvc\controller\MagazineController;
 use mvc\controller\MusiqueController;
 use mvc\controller\FilmController;
 use mvc\controller\LivreController;
+use mvc\controller\CartController;
 
 session_start();
 if (isset($_GET['controller'])) {
@@ -65,6 +67,12 @@ if (isset($_GET['controller'])) {
                             $controller->showProduct($_GET['id']);
                         }
                         break;
+                    case "cart":
+                        if (isset($_GET['id'])) {
+                            $controller->cartProduct($_GET['id']);
+                            $controller->affichage();
+                        }
+                        break;
                 }
             } else {
                 $controller->affichage();
@@ -85,6 +93,12 @@ if (isset($_GET['controller'])) {
                             $controller->showProduct($_GET['id']);
                         }
                         break;
+                    case "cart":
+                        if (isset($_GET['id'])) {
+                            $controller->cartProduct($_GET['id']);
+                            $controller->affichage();
+                        }
+                        break;
                 }
             } else {
                 $controller->affichage();
@@ -97,6 +111,12 @@ if (isset($_GET['controller'])) {
                     case "afficher":
                         if (isset($_GET['id'])) {
                             $controller->showProduct($_GET['id']);
+                        }
+                        break;
+                    case "cart":
+                        if (isset($_GET['id'])) {
+                            $controller->cartProduct($_GET['id']);
+                            $controller->affichage();
                         }
                         break;
                 }
@@ -112,6 +132,25 @@ if (isset($_GET['controller'])) {
                         if (isset($_GET['id'])) {
                             $controller->showProduct($_GET['id']);
                         }
+                        break;
+                    case "cart":
+                        if (isset($_GET['id'])) {
+                            $controller->cartProduct($_GET['id']);
+                            $controller->affichage();
+                        }
+                        break;
+                }
+            } else {
+                $controller->affichage();
+            }
+            break;
+        case 'cart':
+            $controller = new CartController();
+            if (isset($_GET['action'])) {
+                switch ($_GET['action']) {
+                    case "empty":
+                        $controller->emptyCart();
+                        $controller->affichage();
                         break;
                 }
             } else {

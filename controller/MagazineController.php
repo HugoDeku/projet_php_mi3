@@ -55,4 +55,20 @@ class MagazineController extends AController
 
     }
 
+    public function cartProduct(int $id)
+    {
+        if (!isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = array();
+        }
+
+        if (!isset($_SESSION["cart"]["magazines"])) {
+            $_SESSION["cart"]["magazines"] = [];
+        }
+
+        $_SESSION["cart"]["magazines"][] = $this->findById($id);
+
+        var_dump($_SESSION["cart"]);
+
+    }
+
 }

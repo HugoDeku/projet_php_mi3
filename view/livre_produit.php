@@ -26,7 +26,7 @@
                     <i class="fas fa-check-circle"></i>
                     <div>En stock</div>
                 </div>
-                <button class="product_add">Ajouter au panier</button>
+                <button class="product_add"><a href="index.php?controller=livre&action=cart&id=<?=$livre->getId()?>">Ajouter au panier</a></button>
             <?php else:?>
                 <div class="stock out_of_stock">
                     <i class="fas fa-times-circle"></i>

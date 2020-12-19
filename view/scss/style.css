@@ -162,6 +162,7 @@ header nav ul {
 }
 #product_grid .category_card {
   width: min-content;
+  min-width: 70%;
   margin: 10px;
   background-color: white;
   display: flex;
@@ -199,7 +200,9 @@ header nav ul {
   margin-top: 0px;
   margin-bottom: 5px;
 }
-#product_grid .category_card .top_info p {
+#product_grid .category_card .top_info :last-child {
+  font-size: 2em;
+  font-weight: normal;
   color: #7a7a7a;
 }
 #product_grid .category_card .else_product {
@@ -208,6 +211,8 @@ header nav ul {
   background-color: #3e2b1a;
   display: flex;
   justify-content: center;
+  max-height: 150px;
+  overflow: hidden;
 }
 #product_grid .category_card .else_product p:last-child {
   margin-right: 0;

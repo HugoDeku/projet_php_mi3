@@ -52,4 +52,19 @@ class MusiqueController extends AController
         header("Location: index.php?controller=utilisateur&action=connexion");
     }
 
+    public function cartProduct(int $id)
+    {
+        if (!isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = array();
+        }
+
+        if (!isset($_SESSION["cart"]["musique"])) {
+            $_SESSION["cart"]["musique"] = [];
+        }
+
+        $_SESSION["cart"]["musique"][] = $this->findById($id);
+
+        var_dump($_SESSION["cart"]);
+
+    }
 }

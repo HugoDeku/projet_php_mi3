@@ -27,4 +27,20 @@ class FilmController extends AController
         require (__DIR__."/../view/dvd.php");
     }
 
+    public function cartProduct(int $id)
+    {
+        if (!isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = array();
+        }
+
+        if (!isset($_SESSION["cart"]["films"])) {
+            $_SESSION["cart"]["films"] = [];
+        }
+
+        $_SESSION["cart"]["films"][] = $this->findById($id);
+
+        var_dump($_SESSION["cart"]);
+
+    }
+
 }

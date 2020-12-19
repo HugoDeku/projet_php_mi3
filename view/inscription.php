@@ -16,7 +16,7 @@
 </header>
 
 
-// Si l'utilisateur n'est pas connecté
+
 <div id="connexion_card">
     <h1>Inscription</h1>
     <form id="connexion_content" action="index.php?controller=utilisateur&action=inscription" method="post">
@@ -31,7 +31,7 @@
         <?php endif;?>
         <button id="btnSubmitConnexion">S'inscrire</button>
     </form>
-</div>//envoyer vers connexion.php
+</div>
 <div id="already_registered">
     <a href="index.php?controller=utilisateur&action=connexion">Déjà inscrit?</a>
 </div>

@@ -27,4 +27,20 @@ class LivreController extends AController
         require (__DIR__."/../view/livre.php");
     }
 
+    public function cartProduct(int $id)
+    {
+        if (!isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = array();
+        }
+
+        if (!isset($_SESSION["cart"]["livres"])) {
+            $_SESSION["cart"]["livres"] = [];
+        }
+
+        $_SESSION["cart"]["livres"][] = $this->findById($id);
+
+        var_dump($_SESSION["cart"]);
+
+    }
+
 }
