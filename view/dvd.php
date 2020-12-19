@@ -16,13 +16,14 @@
 
 <div id="product_grid">
 
-    <!--todo: boucler là dessus-->
+    <?php foreach ($films as $dvd) { ?>
     <div class="product_card">
-        <img class="product_image_dvd"/>
-        <h2 class="product_name"></h2>
-        <p class="product_artist"></p>
-        <p class="product_date"></p>
+        <img class="product_image_dvd" src="<?=$dvd->getImage()?>"/>
+        <h2 class="product_name"><?=$dvd->getTitre()?></h2>
+        <p class="product_artist"><?=$dvd->getRealisateur()?></p>
+        <p class="product_date"><?=$dvd->getDate()?></p>
     </div>
+    <?php } ?>
 
 </div>
 

@@ -13,6 +13,7 @@ abstract class ProduitStock extends Produit
      * Produit constructor.
      * @param string $titre
      * @param int $stock
+     * @param int $year
      */
 
     public function __construct(string $titre, int $stock, int $year)

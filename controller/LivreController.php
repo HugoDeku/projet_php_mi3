@@ -2,9 +2,9 @@
 
 namespace mvc\controller;
 
-require_once(__DIR__.'/../model/business/MagazineBusiness.php');
+require_once(__DIR__.'/../model/business/LivreBusiness.php');
 
-use mvc\model\business\MagazineBusiness;
+use mvc\model\business\LivreBusiness;
 use mvc\model\entities\Entity;
 
 require_once('AController.php');

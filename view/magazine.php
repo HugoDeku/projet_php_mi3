@@ -15,7 +15,6 @@
 <body>
 <div id="product_grid">
 
-    <!--todo: boucler là dessus-->
     <?php foreach ($magazines as $magazine) { ?>
     <div class="product_card">
         <img class="product_image_magazine" src="<?=$magazine->getImage()?>"/>

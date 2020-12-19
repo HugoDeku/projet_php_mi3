@@ -17,13 +17,14 @@
 
 <div id="product_grid">
 
-    <!--todo: boucler là dessus-->
+    <?php foreach ($musiques as $cd) { ?>
     <div class="product_card">
-        <img class="product_image_cd" src="data/musique/joshua.jpg"/>
-        <h2 class="product_name">Joshua</h2>
-        <p class="product_artist">French 79</p>
-        <p class="product_date">2019</p>
+        <img class="product_image_cd" src="<?=$cd->getImage()?>"/>
+        <h2 class="product_name"><?=$cd->getTitre()?></h2>
+        <p class="product_artist"><?=$cd->getArtiste()?></p>
+        <p class="product_date"><?=$cd->getDate()?></p>
     </div>
+    <?php } ?>
 
 </div>
 

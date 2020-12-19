@@ -17,13 +17,14 @@
 
 <div id="product_grid">
 
-    <!--todo: boucler là dessus-->
+    <?php foreach ($livres as $livre) { ?>
     <div class="product_card">
-        <img class="product_image_livre"/>
-        <h2 class="product_name"></h2>
-        <p class="product_artist"></p>
-        <p class="product_date"></p>
+        <img class="product_image_livre" src="<?=$livre->getImage()?>"/>
+        <h2 class="product_name"><?=$livre->getTitre()?></h2>
+        <p class="product_artist"><?=$livre->getAuteur()?></p>
+        <p class="product_date"><?=$livre->getDate()?></p>
     </div>
+    <?php } ?>
 
 </div>
     <footer id="footer">
