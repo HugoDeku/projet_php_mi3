@@ -14,11 +14,11 @@ class Magazine extends Produit
      * Musique constructor.
      * @param string $titre
      * @param string $image
-     * @param int $numero
-     * @param int $dateParution;
+     * @param string $numero
+     * @param string $dateParution;
      * @param int $periodicite;
      */
-    public function __construct(string $titre,string $image, int $numero, int $dateParution, int $periodicite)
+    public function __construct(string $titre,string $image, string $numero, string $dateParution, int $periodicite)
     {
         parent::__construct($titre);
         $this->setImage("view/data/magazine/" . $image);
@@ -28,33 +28,33 @@ class Magazine extends Produit
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getNumero(): int
+    public function getNumero(): string
     {
         return $this->numero;
     }
 
     /**
-     * @param int $numero
+     * @param string $numero
      */
-    public function setNumero(int $numero): void
+    public function setNumero(string $numero): void
     {
         $this->numero = $numero;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDateParution(): int
+    public function getDateParution(): string
     {
         return $this->dateParution;
     }
 
     /**
-     * @param int $dateParution
+     * @param string $dateParution
      */
-    public function setDateParution(int $dateParution): void
+    public function setDateParution(string $dateParution): void
     {
         $this->dateParution = $dateParution;
     }

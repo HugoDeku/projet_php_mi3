@@ -12,15 +12,15 @@ class UtilisateurController extends AController
 {
     public function __construct()
     {
-        $this->manager = new UtilisateurBusiness();
+        $this->business = new UtilisateurBusiness();
     }
 
     public function connexion(string $login,string $motdepasse){
-        $user = $this->getManager()->getUserByPseudo($login);
+        $user = $this->getBusiness()->getUserByPseudo($login);
 
         if($user == null){
-            $_SESSION['error'] = 'Utilisateur introuvableUtilisateur introuvable';
-            require (__DIR__."/../index.php?controller=utilisateur&action=connexion");
+            $_SESSION['error'] = 'Utilisateur introuvable';
+            header ("Location: index.php?controller=utilisateur&action=connexion");
         }
     }
 
