@@ -67,7 +67,7 @@ class MagazineController extends AController
 
         $_SESSION["cart"]["magazines"][] = $this->findById($id);
 
-        var_dump($_SESSION["cart"]);
+
 
     }
 

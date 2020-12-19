@@ -64,7 +64,7 @@ class MusiqueController extends AController
 
         $_SESSION["cart"]["musique"][] = $this->findById($id);
 
-        var_dump($_SESSION["cart"]);
+
 
     }
 }

@@ -30,9 +30,8 @@
             <?php else:?>
                 <div class="stock out_of_stock">
                     <i class="fas fa-times-circle"></i>
-                    <div>.</div>
                 </div>
-                <button class="product_add_out">Bientôt disponible</button>
+                <button class="product_add_out" disabled>Bientôt disponible</button>
             <?php endif ?>
         </div>
     </div>
