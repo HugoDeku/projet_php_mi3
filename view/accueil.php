@@ -19,26 +19,28 @@
     <?php if(isset($user)) : ?>
         <h1>Bonjour <?=$user->getPseudo()?> !</h1>
     <?php endif;?>
-    <!--todo: itérer pour chaque catégorie-->
+
+    <?php foreach ($categories as $category) {?>
     <div class="category_card">
-        <h1>Notre top de la semaine</h1>
+        <h1>Notre top <?= array_search($category, $categories)?> de la semaine</h1>
         <div class="top_product">
-            <img class="top_img" src="./view/data/musique/parachute.jpeg">
+            <img class="top_img" src="<?= $category[0]->getImage()?>">
             <div class="top_info">
-                <h2>Parachute</h2>
-                <h3>Petit Biscuit</h3>
-                <p>Électronique</p>
+                <h2><?= $category[0]->getTitre()?></h2>
+                <h3><?=$category[0]->getArtiste()?></h3>
+                <h3><?=$category[0]->getArtiste()?></h3>
             </div>
         </div>
         <div class="else_product">
-            <img class="product_img" src="./view/data/musique/s16.jpg">
+            <img class="product_img" src="data/musique/s16.jpg">
             <p>S16</p>
-            <img class="product_img" src="./view/data/musique/caravelle.jpg">
+            <img class="product_img" src="data/musique/caravelle.jpg">
             <p>Caravelle</p>
-            <img class="product_img" src="./view/data/musique/sosadsosexy.jpg">
+            <img class="product_img" src="data/musique/sosadsosexy.jpg">
             <p>so sad so sexy</p>
         </div>
     </div>
+    <?php } ?>
 </div>
 
 <footer id="footer">

@@ -4,7 +4,7 @@
     <nav>
         <div><a href="index.php">Découvrir</a></div>
         <div><a href="index.php?controller=musique">Musique</a></div>
-        <div><a href="index.php?controller=film">Vidéo</a></div>
+        <div><a href="index.php?controller=film">Films</a></div>
         <div><a href="index.php?controller=magazine">Magazines</a></div>
         <div><a href="index.php?controller=livre">Livres</a></div>
         <?php if(isset($_SESSION['user'])) : ?>
