@@ -39,7 +39,11 @@ if (isset($_GET['controller'])) {
                         }
                         break;
                     case 'inscription':
-                        $controller->affichageInscription();
+                        if(isset($_POST['email']) && isset($_POST['login']) && isset($_POST['motdepasse'])){
+                            $controller->inscription($_POST['email'], $_POST['login'], $_POST['motdepasse']);
+                        }else{
+                            $controller->affichageInscription();
+                        }
                         break;
                 }
             }
