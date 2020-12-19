@@ -121,7 +121,7 @@
                     <?=$musique->getStock()?>
                 </td>
                 <td>
-                    <button class="button_update">Modifier</button>
+                    <a href="index.php?controller=musique&action=modifierView&id=<?=$musique->getId()?>"><button class="button_update" >Modifier</button></a>
                     <a href="index.php?controller=musique&action=supprimer&id=<?=$musique->getId()?>"><button class="button_delete" >Supprimer</button></a>
                 </td>
             </tr>
@@ -222,7 +222,7 @@
                     <?=$magazine->getNumero()?>
                 </td>
                 <td>
-                    <button class="button_update">Modifier</button>
+                    <a href="index.php?controller=magazine&action=modifierView&id=<?=$magazine->getId()?>"><button class="button_update" >Modifier</button></a>
                     <a href="index.php?controller=magazine&action=supprimer&id=<?=$magazine->getId()?>"><button class="button_delete" >Supprimer</button></a>
                 </td>
             </tr>

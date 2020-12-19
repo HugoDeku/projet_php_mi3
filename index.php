@@ -76,6 +76,13 @@ if (isset($_GET['controller'])) {
                     case "supprimer":
                         $controller->supprimer($_GET['id']);
                         break;
+                    case "modifierView":
+                        $controller->modifierView($_GET['id']);
+                        break;
+                    case "modifier":
+                        $controller->modifier($_POST['id'], $_POST['titre'], $_POST['periodicite'], $_POST['month']
+                            , $_POST['year'], $_POST['numero']);
+                        break;
                 }
             } else {
                 $controller->affichage();
@@ -104,6 +111,13 @@ if (isset($_GET['controller'])) {
                         break;
                     case "supprimer":
                         $controller->supprimer($_GET['id']);
+                        break;
+                    case "modifierView":
+                        $controller->modifierView($_GET['id']);
+                        break;
+                    case "modifier":
+                        $controller->modifier($_POST['id'], $_POST['titre'], $_POST['artiste'], $_POST['year']
+                            , $_POST['stock'], $_POST['pistes'], $_POST['style']);
                         break;
                 }
             } else {

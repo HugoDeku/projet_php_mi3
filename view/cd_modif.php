@@ -16,18 +16,17 @@
 
 <div id="product_closeup">
     <div class="top_info">
-        <input id="inputImage" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
-        <img class="product_image_cd" src="data/musique/joshua.jpg"/>
         <div class="top_description">
-            <input id="input_titre" class="product_name" onfocus="this.value=''" value="Titre de l'album"/>
-            <input id="input_artiste" onfocus="this.value=''" value="Artiste"/>
-            <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900"/>
-            <div class="stock">
-                <input id="input_stock" type="number" onfocus="this.value=''" value="0"/>
-            </div>
-            <h2>Plus d'informations</h2>
-            <input id="input_pistes" type="number" onfocus="this.value=''" value="0"/>
-            <input id="input_style" onfocus="this.value=''" value="Style"/>
+            <form method="post" action="index.php?controller=musique&action=modifier">
+                <input id="input_id" hidden name="id" value="<?=$musique->getId()?>">
+                <input id="input_titre" class="product_name" onfocus="this.value=''" value="<?=$musique->getTitre()?>" name="titre"/>
+                <input id="input_artiste" onfocus="this.value=''" value="<?=$musique->getArtiste()?>" name="artiste"/>
+                <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="<?=$musique->getYear()?>" name="year"/>
+                <input id="input_stock" type="number" onfocus="this.value=''" value="<?=$musique->getStock()?>" name="stock"/>
+                <input id="input_pistes" type="number" onfocus="this.value=''" value="<?=$musique->getNbPiste()?>" name="pistes"/>
+                <input id="input_style" onfocus="this.value=''" value="<?=$musique->getStyle()?>"  name="style"/>
+                <button class="button_add" name="submit" type="submit">Modifier</button>
+            </form>
         </div>
     </div>
 </div>

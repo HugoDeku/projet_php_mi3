@@ -79,4 +79,31 @@ class MagazineController extends AController
         header("Location: index.php?controller=utilisateur&action=connexion");
     }
 
+    public function modifier($id, $titre, $perio, $month, $year, $numero)
+    {
+        $oldMagazine = $this->findById($id);
+
+        try{
+
+            $ext = strtolower(pathinfo(basename($oldMagazine->getImage()),PATHINFO_EXTENSION));
+            $imageName = strtolower(str_replace(" ", "",$titre)) . "." . $ext;
+            $dateParution = \Date::getStringMonthYear($month, $year);
+            $newMagazine = new Magazine($titre, $imageName, $numero, $dateParution, $perio);
+            $newMagazine->setId($id);
+            $newMagazine->setImage($imageName);
+            $this->getBusiness()->update($newMagazine);
+            rename($oldMagazine->getImage(), "./view/data/magazine/".$imageName);
+            header("Location: index.php?controller=utilisateur&action=connexion");
+        }catch(\Exception $error){
+            $_SESSION['error'] = "Valeur manquante ou titre déjà utilisé";
+            header("Location: index.php?controller=utilisateur&action=connexion");
+        }
+    }
+
+    public function modifierView($id)
+    {
+        $magazine = $this->findById($id);
+        require("./view/magazine_modif.php");
+    }
+
 }

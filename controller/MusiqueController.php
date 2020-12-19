@@ -74,4 +74,29 @@ class MusiqueController extends AController
         $this->getBusiness()->delete($id);
         header("Location: index.php?controller=utilisateur&action=connexion");
     }
+
+    public function modifierView($id)
+    {
+        $musique = $this->findById($id);
+        require("./view/cd_modif.php");
+    }
+
+    public function modifier($id, $titre, $artiste, $year, $stock, $pistes, $style)
+    {
+        $oldMusique = $this->findById($id);
+
+        try{
+            $ext = strtolower(pathinfo(basename($oldMusique->getImage()),PATHINFO_EXTENSION));
+            $imageName = strtolower(str_replace(" ", "",$titre)) . "." . $ext;
+            $newMusique = new Musique($titre, $stock, $imageName, $artiste, $year, $pistes, $style);
+            $newMusique->setId($id);
+            $newMusique->setImage($imageName);
+            $this->getBusiness()->update($newMusique);
+            rename($oldMusique->getImage(), "./view/data/musique/".$imageName);
+            header("Location: index.php?controller=utilisateur&action=connexion");
+        }catch(\Exception $error){
+            $_SESSION['error'] = "Valeur manquante ou titre déjà utilisé";
+            header("Location: index.php?controller=utilisateur&action=connexion");
+        }
+    }
 }
