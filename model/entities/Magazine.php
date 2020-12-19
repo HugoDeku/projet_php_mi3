@@ -21,7 +21,7 @@ class Magazine extends Produit
     public function __construct(string $titre,string $image, string $numero, string $dateParution, int $periodicite)
     {
         parent::__construct($titre);
-        $this->setImage($image);
+        $this->setImage("./view/data/magazine/".$image);
         $this->numero = $numero;
         $this->dateParution = $dateParution;
         $this->periodicite = $periodicite;
