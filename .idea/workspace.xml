@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e29d56c1-cbe3-459a-9ca5-4397c6cb2ff7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MagazineController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MusiqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MusiqueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Date.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Date.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/view/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +55,7 @@
       <workItem from="1608137464997" duration="1982000" />
       <workItem from="1608206651981" duration="3918000" />
       <workItem from="1608308459961" duration="645000" />
-      <workItem from="1608376142094" duration="23864000" />
+      <workItem from="1608376142094" duration="24871000" />
     </task>
     <servers />
   </component>
