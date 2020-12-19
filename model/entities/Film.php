@@ -23,7 +23,7 @@ class Film extends ProduitStock
     public function __construct(string $titre, string $image, int $stock, int $year,string $realisateur,string $acteur)
     {
         parent::__construct($titre, $stock, $year);
-        $this->setImage("view/data/film/" . $image);
+        $this->setImage("view/data/video/" . $image);
         $this->realisateur = $realisateur;
         $this->acteur = $acteur;
     }

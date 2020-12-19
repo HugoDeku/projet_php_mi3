@@ -22,7 +22,7 @@
         <img class="product_image_livre" src="<?=$livre->getImage()?>"/>
         <h2 class="product_name"><?=$livre->getTitre()?></h2>
         <p class="product_artist"><?=$livre->getAuteur()?></p>
-        <p class="product_date"><?=$livre->getDate()?></p>
+        <p class="product_date"><?=$livre->getYear()?></p>
     </div>
     <?php } ?>
 

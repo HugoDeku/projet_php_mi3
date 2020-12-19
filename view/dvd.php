@@ -21,7 +21,7 @@
         <img class="product_image_dvd" src="<?=$dvd->getImage()?>"/>
         <h2 class="product_name"><?=$dvd->getTitre()?></h2>
         <p class="product_artist"><?=$dvd->getRealisateur()?></p>
-        <p class="product_date"><?=$dvd->getDate()?></p>
+        <p class="product_date"><?=$dvd->getYear()?></p>
     </div>
     <?php } ?>
 

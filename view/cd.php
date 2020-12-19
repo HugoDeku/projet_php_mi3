@@ -22,7 +22,7 @@
         <img class="product_image_cd" src="<?=$cd->getImage()?>"/>
         <h2 class="product_name"><?=$cd->getTitre()?></h2>
         <p class="product_artist"><?=$cd->getArtiste()?></p>
-        <p class="product_date"><?=$cd->getDate()?></p>
+        <p class="product_date"><?=$cd->getYear()?></p>
     </div>
     <?php } ?>
 
