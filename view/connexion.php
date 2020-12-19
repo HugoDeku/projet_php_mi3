@@ -66,34 +66,35 @@
                     Actions
                 </th>
             </tr>
-
-            <tr class="table_add">
-                <td>
-                    <input id="inputImage" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
-                    <img id="previewImage" class="img_music" src="#" />
-                </td>
-                <td>
-                    <input id="input_titre" onfocus="this.value=''" value="Titre de l'album"/>
-                </td>
-                <td>
-                    <input id="input_artiste" onfocus="this.value=''" value="Artiste"/>
-                </td>
-                <td>
-                    <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900"/>
-                </td>
-                <td>
-                    <input id="input_style" onfocus="this.value=''" value="Style"/>
-                </td>
-                <td>
-                    <input id="input_pistes" type="number" onfocus="this.value=''" value="0"/>
-                </td>
-                <td>
-                    <input id="input_stock" type="number" onfocus="this.value=''" value="0"/>
-                </td>
-                <td>
-                    <button class="button_add">Ajouter</button>
-                </td>
-            </tr>
+            <form action="index.php?controller=musique&action=ajouter" method="post">
+                <tr class="table_add">
+                    <td>
+                        <input id="inputImage" name="image" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
+                        <img id="previewImage" class="img_music" src="#" />
+                    </td>
+                    <td>
+                        <input id="input_titre" onfocus="this.value=''" value="Titre de l'album" name="titre"/>
+                    </td>
+                    <td>
+                        <input id="input_artiste" onfocus="this.value=''" value="Artiste" name="artiste"/>
+                    </td>
+                    <td>
+                        <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900" name="year"/>
+                    </td>
+                    <td>
+                        <input id="input_style" onfocus="this.value=''" value="Style" name="style"/>
+                    </td>
+                    <td>
+                        <input id="input_pistes" type="number" onfocus="this.value=''" value="0" name="nbpiste"/>
+                    </td>
+                    <td>
+                        <input id="input_stock" type="number" onfocus="this.value=''" value="0" name="stock"/>
+                    </td>
+                    <td>
+                        <button class="button_add" type="submit" name="submit" >Ajouter</button>
+                    </td>
+                </tr>
+            </form>
             <?php foreach ($musiques as $musique) {?>
             <tr class="table_product">
                 <td>
@@ -156,23 +157,44 @@
 
             <tr class="table_add">
                 <td>
-                    <input id="inputImage" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
+                    <input id="inputImage" value="image" type="file" accept=".jpg, .jpeg, .png" multiple="false" onchange="setNewImage(this);"/>
                     <img id="previewImage" class="img_magazine" src="#" />
                 </td>
                 <td>
-                    <input id="input_titre" onfocus="this.value=''" value="Titre"/>
+                    <input id="input_titre" onfocus="this.value=''" value="Titre" value="titre"/>
                 </td>
                 <td>
-
+                    <select id="input_period" name="periodicite">
+                        <option value="0">Annuel</option>
+                        <option value="1">Semestriel</option>
+                        <option value="2">Trimestriel</option>
+                        <option value="3">Quadrimestriel</option>
+                        <option value="4">Mensuel</option>
+                        <option value="5">Hebdomadaire</option>
+                    </select>
                 </td>
                 <td>
-                    <input id="input_date" onfocus="this.value=''" value="mois 1900"/>
+                    <select id="input_month" name="month">
+                        <option value="01">Janvier</option>
+                        <option value="02">Février</option>
+                        <option value="03">Mars</option>
+                        <option value="04">Avril</option>
+                        <option value="05">Mai</option>
+                        <option value="06">Juin</option>
+                        <option value="07">Juillet</option>
+                        <option value="08">Août</option>
+                        <option value="09">Septembre</option>
+                        <option value="10">Octobre</option>
+                        <option value="11">Novembre</option>
+                        <option value="12">Décembre</option>
+                    </select>
+                    <input id="input_date" type="number" min="1900" max="2021" onfocus="this.value=''" value="1900" name="year"/>
                 </td>
                 <td>
-                    <input id="input_pages" type="number" min="1" onfocus="this.value=''" value="0"/>
+                    <input id="input_pages" type="number" min="1" onfocus="this.value=''" value="0" value="numero"/>
                 </td>
                 <td>
-                    <button class="button_add">Ajouter</button>
+                    <button class="button_add" value="submit" type="submit">Ajouter</button>
                 </td>
             </tr>
 

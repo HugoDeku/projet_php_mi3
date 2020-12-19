@@ -52,12 +52,33 @@ if (isset($_GET['controller'])) {
             break;
         case 'magazine':
             $controller = new MagazineController();
-            $controller->affichage();
+            if(isset($_GET['action'])){
+                switch($_GET['action']){
+                    case "ajouter":
+                        if(isset($_POST['submit'])){
+                            $controller->addProduit($_POST['image'], $_POST['titre'], $_POST['periodicite'], $_POST['month']
+                                , $_POST['year'], $_POST['numero']);
+                        }
+                        break;
+                }
+            }else{
+                $controller->affichage();
+            }
             break;
         case 'musique':
             $controller = new MusiqueController();
-            echo "hi";
-            $controller->affichage();
+            if(isset($_GET['action'])){
+                switch($_GET['action']){
+                    case "ajouter":
+                        if(isset($_POST['submit'])){
+                            $controller->addProduit($_POST['image'], $_POST['titre'], $_POST['artiste'], $_POST['year']
+                            , $_POST['style'], $_POST['nbpiste'], $_POST['stock']);
+                        }
+                        break;
+                }
+            }else{
+                $controller->affichage();
+            }
             break;
         case 'film':
             $controller = new FilmController();

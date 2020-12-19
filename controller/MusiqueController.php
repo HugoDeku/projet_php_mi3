@@ -17,9 +17,13 @@ class MusiqueController extends AController
     }
 
     public function affichage(){
-        echo "coucou";
         $musiques = $this->findAll();
         require (__DIR__."/../view/cd.php");
+    }
+
+    public function addProduit($image, $titre, $artiste, $year, $style, $nbpiste, $stock)
+    {
+
     }
 
 }

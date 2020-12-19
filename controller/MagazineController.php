@@ -21,4 +21,9 @@ class MagazineController extends AController
         require (__DIR__."/../view/magazine.php");
     }
 
+    public function addProduit($image, $titre, $periodicite, $month, $year, $numero)
+    {
+
+    }
+
 }
