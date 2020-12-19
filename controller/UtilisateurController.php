@@ -17,7 +17,6 @@ class UtilisateurController extends AController
 
     public function connexion(string $login,string $motdepasse){
         $user = $this->getBusiness()->getUserByPseudo($login);
-
         if($user == null){
             $_SESSION['error'] = 'Utilisateur introuvable';
             header ("Location: index.php?controller=utilisateur&action=connexion");
@@ -25,6 +24,10 @@ class UtilisateurController extends AController
     }
 
     public function affichage(){
+        if(isset($_SESSION['error'])){
+            $error = $_SESSION['error'];
+            unset($_SESSION['error']);
+        }
         require(__DIR__."/../view/connexion.php");
     }
 

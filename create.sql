@@ -73,35 +73,35 @@ CREATE TABLE IF NOT EXISTS EMPRUNT (
 
 INSERT INTO UTILISATEUR (PSEUDO, EMAIL, MOTDEPASSE, ISADMIN) VALUES ('admin', 'admin@admin.fr', SHA1('admin'), TRUE);
 
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Caravelle', 'data/musique/caravelle.jpg', 'Polo & Pan', 2017, 34, 12, 'Electronique');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Currents', 'data/musique/currents.jpg', 'Tame Impala', 2015, 78, 13, 'Electronique');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('ENERGY', 'data/musique/energy.jpg', 'Disclosure', 2020, 100, 20, 'House');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Vénus', 'data/musique/venus.jpg', 'Joanna', 2020, 35, 7, 'Pop');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Joshua', 'data/musique/joshua.jpg', 'French79', 2019, 0, 13, 'Electronique');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Parachute', 'data/musique/parachute.jpg', 'Petit Biscuit', 2020, 10, 9, 'Pop');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('S16', 'data/musique/s16.jpg', 'Woodkid', 2020, 89, 11, 'Alternative');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('After Hours', 'data/musique/afterhours.jpg', 'The Weeknd', 2020, 90, 14, 'R\'N\'B');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('so sad so sexy', 'data/musique/sosadsosexy.jpg', 'Lykke Li', 2018, 43, 10, 'Pop');
-INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Miss Anthropocene', 'data/musique/missanthropocene.jpg', 'Grimes', 2020, 0, 15, 'Electronique');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Caravelle', 'caravelle.jpg', 'Polo & Pan', 2017, 34, 12, 'Electronique');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Currents', 'currents.jpg', 'Tame Impala', 2015, 78, 13, 'Electronique');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('ENERGY', 'energy.jpg', 'Disclosure', 2020, 100, 20, 'House');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Vénus', 'venus.jpg', 'Joanna', 2020, 35, 7, 'Pop');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Joshua', 'joshua.jpg', 'French79', 2019, 0, 13, 'Electronique');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Parachute', 'parachute.jpg', 'Petit Biscuit', 2020, 10, 9, 'Pop');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('S16', 's16.jpg', 'Woodkid', 2020, 89, 11, 'Alternative');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('After Hours', 'afterhours.jpg', 'The Weeknd', 2020, 90, 14, 'R\'N\'B');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('so sad so sexy', 'sosadsosexy.jpg', 'Lykke Li', 2018, 43, 10, 'Pop');
+INSERT INTO MUSIQUE (TITRE, IMAGE, ARTISTE, ANNEESORTIE, STOCK, PISTES, STYLE) VALUES ('Miss Anthropocene', 'missanthropocene.jpg', 'Grimes', 2020, 0, 15, 'Electronique');
 
 
-INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('PAPER Magazine', 'data/magazine/paper.jpeg', 154, '2020-03', 4);
-INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Hidden Scotland', 'data/magazine/hidden.jpg', 1, '2020-09', 0);
-INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Flow Magazine', 'data/magazine/flow.jpg', 28, '2018-10', 4);
-INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Vogue US', 'data/magazine/vogue.png', 2211, '2020-12', 4);
-INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Society', 'data/magazine/society.jpg', 4887, '2019-03', 5);
+INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('PAPER Magazine', 'paper.jpeg', 154, '2020-03', 4);
+INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Hidden Scotland', 'hidden.jpg', 1, '2020-09', 0);
+INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Flow Magazine', 'flow.jpg', 28, '2018-10', 4);
+INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Vogue US', 'vogue.png', 2211, '2020-12', 4);
+INSERT INTO MAGAZINE (TITRE, IMAGE, NUMERO, DATEPARUTION, PERIODICITE) VALUES ('Society', 'society.jpg', 4887, '2019-03', 5);
 
-INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Deadpool 2', 'data/film/deadpool2.jpg', 'David Leitch', 2018, 07, 'Ryan Reynolds');
-INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Harry Potter et la Coupe de feu', 'data/film/harrypotter.jpg', 'Mike Newell', 2005, 56, 'Daniel Radcliffe');
-INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Inception', 'data/film/inception.jpg', 'Christopher Nolan', 2010, 34, 'Leonardo Di Caprio');
-INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Le Diable s\'Habille en Prada', 'data/film/prada.jpg', 'David Frenkel', 2006, 1, 'Anne Hathaway');
-INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Kill Bill vol. 1', 'data/film/killbill.jpg', 'David Leitch', 2003, 0, 'Uma Thurman');
+INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Deadpool 2', 'deadpool2.jpg', 'David Leitch', 2018, 07, 'Ryan Reynolds');
+INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Harry Potter et la Coupe de feu', 'harrypotter.jpg', 'Mike Newell', 2005, 56, 'Daniel Radcliffe');
+INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Inception', 'inception.jpg', 'Christopher Nolan', 2010, 34, 'Leonardo Di Caprio');
+INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Le Diable s\'Habille en Prada', 'prada.jpg', 'David Frenkel', 2006, 1, 'Anne Hathaway');
+INSERT INTO FILM (TITRE, IMAGE, REALISATEUR, ANNEESORTIE, STOCK, VEDETTE) VALUES ('Kill Bill vol. 1', 'killbill.jpg', 'David Leitch', 2003, 0, 'Uma Thurman');
 
 
-INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Le Petit Prince', 'data/livre/lepetitprince.jpg', 'Antoine de Saint-Exupéry', 1943, 78, 'Roman', 93);
-INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Call Me By Your Name', 'data/livre/cmbyn.jpg', 'André Aciman', 2007, 78, 'Roman', 316);
-INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Hunger Games vol. 1', 'data/livre/hg.jpg', 'Suzanne Collins', 2008, 3, 'Roman', 374);
-INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Artemis Fowl', 'data/livre/artemisfowl.jpg', 'Eoin Colfer', 2001, 0, 'Roman', 280);
-INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Divergente', 'data/livre/divergente.jpg', 'Veronica Roth', 2011, 56, 'Roman', 487);
+INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Le Petit Prince', 'lepetitprince.jpg', 'Antoine de Saint-Exupéry', 1943, 78, 'Roman', 93);
+INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Call Me By Your Name', 'cmbyn.jpg', 'André Aciman', 2007, 78, 'Roman', 316);
+INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Hunger Games vol. 1', 'hg.jpg', 'Suzanne Collins', 2008, 3, 'Roman', 374);
+INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Artemis Fowl', 'artemisfowl.jpg', 'Eoin Colfer', 2001, 0, 'Roman', 280);
+INSERT INTO LIVRE (TITRE, IMAGE, AUTEUR, ANNEESORTIE, STOCK, TYPE, PAGES) VALUES ('Divergente', 'divergente.jpg', 'Veronica Roth', 2011, 56, 'Roman', 487);
 
 INSERT INTO EMPRUNT (UTILISATEUR_ID, PRODUIT_ID, TYPE, DATE) VALUES (1, 1, 0, "2020-12-16");

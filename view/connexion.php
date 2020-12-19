@@ -23,6 +23,9 @@
         <input type="text" id="inputLogin" name="login"/>
         <label>Password</label>
         <input type="password" id="inputPassword" name="motdepasse"/>
+        <?php if(isset($error)) : ?>
+            <p><?=$error?></p>
+        <?php endif;?>
         <button id="btnSubmitConnexion">GO</button>
     </form>
 </div>

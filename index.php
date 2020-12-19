@@ -7,7 +7,7 @@ require_once(__DIR__ . "/controller/MagazineController.php");
 use mvc\controller\AccueilController;
 use mvc\controller\UtilisateurController;
 use mvc\controller\MagazineController;
-
+session_start();
 if (isset($_GET['controller'])) {
     switch ($_GET['controller']) {
         case 'utilisateur':
@@ -16,8 +16,7 @@ if (isset($_GET['controller'])) {
                 switch ($_GET['action']) {
                     case 'connexion':
                         if (isset($_SESSION['error'])) {
-                            echo($_SESSION['error']);
-                            unset($_SESSION['error']);
+                            $controller->affichage();
                         } else {
                             if (isset($_POST["login"]) && isset($_POST["motdepasse"])) {
                                 $controller->connexion($_POST["login"], $_POST["motdepasse"]);

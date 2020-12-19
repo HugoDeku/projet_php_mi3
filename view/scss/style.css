@@ -301,6 +301,9 @@ header nav ul {
   padding: 30px 30px;
   width: 200px;
 }
+#connexion_card p {
+  color: #b71c1c;
+}
 #connexion_card #connexion_content {
   width: 100%;
   display: flex;
