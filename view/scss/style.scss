@@ -5,6 +5,7 @@ $bg_light: #3d3d3d;
 $bg_lighter: #7a7a7a;
 $font_color: #d6dbdf;
 $brown: #3e2b1a;
+$brown_light: #e6d7cc;
 $omi_red: #b71c1c;
 $omi_orange: #e65100;
 $omi_yellow: #ffca28;
@@ -33,6 +34,7 @@ header {
     bottom: 20px;
     right: 20px;
     background-color: white;
+    border: solid 5px $bg_color;
 
     a {
       width: 100%;
@@ -51,7 +53,7 @@ header {
   }
 
   .basket:hover {
-    background-color: $bg_lighter;
+    background-color: $brown_light;
   }
 
   h1 {
@@ -62,7 +64,7 @@ header {
     border-image: $omi_border_image;
     border-image-width: 1px;
     text-shadow: 5px 0px 0px $bg_lighter,
-                10px 0px 0px $bg_light;
+    10px 0px 0px $bg_light;
     width: 200px;
     margin-left: 10%;
   }
@@ -115,6 +117,7 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       li {
         padding: 10px;
       }
@@ -143,15 +146,24 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   #pageTop {
     color: $font_color;
     text-decoration: none;
     font-weight: bold;
   }
+
   #pageTop:hover {
     text-decoration: underline;
   }
 
+}
+
+#userHello {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 #product_grid {
@@ -167,6 +179,9 @@ header {
   }
 
   .product_card {
+    min-height: 330px;
+    max-height: 330px;
+    min-width: 200px;
     margin: 10px;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -175,12 +190,19 @@ header {
     align-items: flex-start;
     padding: 30px 30px 10px;
     border-bottom: solid 30px $brown;
+
     * {
       max-width: 200px;
     }
 
+    img {
+      max-height: 250px;
+      margin: auto;
+    }
+
     h2 {
-      margin-top: 15px;
+      font-size: 1.3em;
+      margin-top: 5px;
       margin-bottom: 0;
     }
 
@@ -194,15 +216,13 @@ header {
     }
 
     .product_date {
+      margin: 0;
       color: #7a7a7a;
     }
   }
 
   .product_card:hover {
-    img {
-      opacity: 0.9;
-    }
-    border-image: $omi_border_image;
+    background-color: $brown_light;
   }
 
   .category_card {
@@ -228,23 +248,28 @@ header {
       display: flex;
       margin: 40px;
     }
+
     .top_img {
       width: 200px;
       margin-right: 20px;
     }
+
     .top_info {
       display: flex;
       flex-direction: column;
+
       h2 {
         font-size: 4em;
         font-weight: bolder;
         margin: 0;
       }
+
       h3 {
         font-size: 3em;
         margin-top: 0px;
         margin-bottom: 5px;
       }
+
       :last-child {
         font-size: 2em;
         font-weight: normal;
@@ -261,7 +286,7 @@ header {
       max-height: 150px;
       overflow: hidden;
 
-      p:last-child{
+      p:last-child {
         margin-right: 0;
       }
 
@@ -294,6 +319,7 @@ header {
   .top_description {
     border-left: 1px solid $bg_color;
     padding-left: 30px;
+
     .product_date {
       color: #7a7a7a;
     }
@@ -339,6 +365,7 @@ header {
     i {
       margin-right: 10px;
     }
+
     div {
       display: flex;
       align-items: center;
@@ -347,14 +374,25 @@ header {
       border-left: solid 1px $available;
     }
   }
+
   button {
     margin: 15px;
     width: 100%;
     max-width: 300px;
-    color: white;
     height: 40px;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: $available;
+    border: solid 3px rgba(245, 245, 245, 0.4);
+
+    a {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  button:hover {
+      background: rgb(98, 155, 116) ;
   }
 
   .out_of_stock {
@@ -369,13 +407,16 @@ header {
 
   .product_add_out {
     background-color: $unavailable;
+    text-decoration: none;
+    color: white;
+  }
+  .product_add_out:hover {
+    background-color: $unavailable;
   }
 
 }
 
-
-
-#error_config{
+#error_config {
   background-color: #b71c1c;
   width: 100%;
   text-align: center;
@@ -396,7 +437,7 @@ header {
   padding: 30px 30px;
   width: 200px;
 
-  p{
+  p {
     color: #b71c1c;
   }
 
@@ -409,6 +450,7 @@ header {
     input {
       margin-bottom: 10px;
     }
+
     button {
       margin-top: 20px;
       height: 25px;
@@ -423,12 +465,15 @@ header {
 #already_registered {
   display: flex;
   justify-content: center;
+
   a {
     margin: auto;
+    margin-top: 20px;
     color: $bg_lighter;
     text-decoration: none;
   }
-  a:hover{
+
+  a:hover {
     color: white;
     text-decoration: underline;
   }
@@ -458,6 +503,7 @@ header {
       font-variant: all-small-caps;
       background-color: $brown;
     }
+
     td {
       border: 1px solid $brown;
       padding: 5px;
@@ -469,12 +515,14 @@ header {
         margin: auto;
       }
     }
+
     .table_title {
       font-weight: bold;
       font-variant: normal;
       padding: 10px;
       font-size: 2em;
     }
+
     .table_add {
       border: 5px solid #cda522;
     }
@@ -499,26 +547,38 @@ header {
   color: white;
 }
 
-#add_to_emprunts {
+#cart_buttons {
   position: fixed;
-  width: 200px;
+  width: 400px;
   bottom: 30px;
   left: 50%;
-  margin-left: -100px;
-
+  margin-left: -200px;
   background: transparent;
   border: none;
-  a {
-    margin-top: 20px;
-    padding: 15px 50px;
-    background: $omi_gradient;
-    border-radius: 30px;
-    border: 3px solid white;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: white;
+  display: flex;
+
+  #add_to_emprunts, #retour {
+    background: transparent;
+    border: none;
+
+    a {
+      margin-top: 20px;
+      padding: 15px 50px;
+      background: $omi_gradient;
+      border-radius: 30px;
+      border: 3px solid white;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: white;
+    }
   }
 
+  #retour a {
+    background: $bg_light;
+    border-color: $bg_lighter;
+    color: $bg_lighter;
+  }
 }
+
 
 

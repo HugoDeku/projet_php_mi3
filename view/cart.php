@@ -50,7 +50,11 @@
 
 </div>
 
-<button id="add_to_emprunts"><a href="index.php?controller=cart&action=empty"> Emprunter</button>
+<div id="cart_buttons">
+    <button id="retour"><a href="index.php">Retour</a></button>
+    <button id="add_to_emprunts"><a href="index.php?controller=cart&action=empty"> Emprunter</a></button>
+</div>
+
 
 <footer id="footer">
     <?php
