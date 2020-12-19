@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/5b938fc7f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<?php echo $magazines; ?>
 <header id="nav">
     <?php
     include 'header.php';
@@ -17,12 +17,14 @@
 <div id="product_grid">
 
     <!--todo: boucler là dessus-->
+    <?php foreach ($magazines as $magazine) { ?>
     <div class="product_card">
-        <img class="product_image_magazine"/>
-        <h2 class="product_name"></h2>
-        <p class="product_artist"></p>
-        <p class="product_date"></p>
+        <img class="product_image_magazine" src="<?=$magazine->image?>"/>
+        <h2 class="product_name"><?=$magazine->titre?></h2>
+        <p class="product_artist"><?=$magazine->numero?></p>
+        <p class="product_date"><?=$magazine->dateParution?></p>
     </div>
+    <?php } ?>
 
 </div>
 
